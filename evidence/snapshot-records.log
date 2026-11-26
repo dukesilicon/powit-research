@@ -1,0 +1,5 @@
+$ node --experimental-strip-types scripts/verify-records.mjs
+{"state":"CONCORDANT","attestationHash":"0088e00e861fe6cfb65b5f91881aa583f7b5204708241c73b9015f03ff0293ee","actions":23,"observations":5,"valid":true,"tamperRejected":true,"synthetic":true}
+{"state":"SPLIT","attestationHash":"c19c1ac53ea15f279e4fe5d2f8a537c8aafc61b0d56b65e92e31927cea3dc34d","actions":23,"observations":5,"valid":true,"tamperRejected":true,"synthetic":true}
+{"state":"THIN","attestationHash":"758652a08d992811631734eb45208569cfc2f8ea24c2b40d84af40f5f5e1d718","actions":23,"observations":5,"valid":true,"tamperRejected":true,"synthetic":true}
+{"state":"SILENT","attestationHash":"8a88efede531fac29d7957c5e0b23cb914156ebf22ab39b0422dc5f2ee4d7d76","actions":13,"observations":0,"valid":true,"tamperRejected":true,"synthetic":true}

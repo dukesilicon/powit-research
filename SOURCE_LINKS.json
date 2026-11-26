@@ -1,0 +1,104 @@
+{
+  "note": "Original links and canonical source bytes unchanged. Referenced context outside the allowlist resolves to clearly labelled release-scope notes, not purported copies of omitted documents.",
+  "originalReferences": [
+    {
+      "source": "docs/decisions/ADR-001-powit-thoth-separation.md",
+      "target": "../../protocol/overview/conceptual-hierarchy.md"
+    },
+    {
+      "source": "docs/decisions/ADR-001-powit-thoth-separation.md",
+      "target": "../../protocol/research/open-questions.md"
+    },
+    {
+      "source": "docs/decisions/ADR-001-powit-thoth-separation.md",
+      "target": "../../protocol/versions/README.md"
+    },
+    {
+      "source": "docs/decisions/ADR-002-selective-linkability.md",
+      "target": "../../protocol/powit/identity/selective-linkability.md"
+    },
+    {
+      "source": "docs/decisions/ADR-002-selective-linkability.md",
+      "target": "../../protocol/research/open-questions.md"
+    },
+    {
+      "source": "docs/decisions/ADR-002-selective-linkability.md",
+      "target": "../../protocol/versions/README.md"
+    },
+    {
+      "source": "docs/decisions/ADR-003-solana-as-preferred-settlement.md",
+      "target": "../../protocol/powit/settlement/solana.md"
+    },
+    {
+      "source": "docs/decisions/ADR-003-solana-as-preferred-settlement.md",
+      "target": "../../protocol/research/open-questions.md"
+    },
+    {
+      "source": "docs/decisions/ADR-003-solana-as-preferred-settlement.md",
+      "target": "../../protocol/versions/README.md"
+    },
+    {
+      "source": "docs/decisions/ADR-004-disagreement-preservation.md",
+      "target": "../../protocol/powit/epistemic-states.md"
+    },
+    {
+      "source": "docs/decisions/ADR-004-disagreement-preservation.md",
+      "target": "../../protocol/research/open-questions.md"
+    },
+    {
+      "source": "docs/decisions/ADR-004-disagreement-preservation.md",
+      "target": "../../protocol/versions/README.md"
+    },
+    {
+      "source": "docs/decisions/ADR-005-independence-vs-reputation.md",
+      "target": "../../protocol/powit/reputation/reputation-vs-independence.md"
+    },
+    {
+      "source": "docs/decisions/ADR-005-independence-vs-reputation.md",
+      "target": "../../protocol/research/open-questions.md"
+    },
+    {
+      "source": "docs/decisions/ADR-005-independence-vs-reputation.md",
+      "target": "../../protocol/versions/README.md"
+    },
+    {
+      "source": "docs/decisions/ADR-008-thoth-v0-settlement-profile.md",
+      "target": "../../protocol/powit/settlement/THOTH_V0_SETTLEMENT_PROFILE.md"
+    },
+    {
+      "source": "docs/decisions/ADR-008-thoth-v0-settlement-profile.md",
+      "target": "../../protocol/powit/settlement/THOTH_V0_SETTLEMENT_PROFILE.md"
+    },
+    {
+      "source": "protocol/overview/terminology.md",
+      "target": "../powit/settlement/THOTH_V0_SETTLEMENT_PROFILE.md"
+    },
+    {
+      "source": "protocol/overview/terminology.md",
+      "target": "../versions/README.md"
+    },
+    {
+      "source": "protocol/powit/v0/POWIT_V0_OPEN_QUESTIONS.md",
+      "target": "../../research/open-questions.md"
+    },
+    {
+      "source": "protocol/reference/canonical-lifecycle.md",
+      "target": "../overview/README.md"
+    },
+    {
+      "source": "protocol/reference/canonical-lifecycle.md",
+      "target": "../research/open-questions.md"
+    }
+  ],
+  "releaseScopeNotes": [
+    "protocol/overview/conceptual-hierarchy.md",
+    "protocol/research/open-questions.md",
+    "protocol/versions/README.md",
+    "protocol/powit/identity/selective-linkability.md",
+    "protocol/powit/settlement/solana.md",
+    "protocol/powit/epistemic-states.md",
+    "protocol/powit/reputation/reputation-vs-independence.md",
+    "protocol/powit/settlement/THOTH_V0_SETTLEMENT_PROFILE.md",
+    "protocol/overview/README.md"
+  ]
+}

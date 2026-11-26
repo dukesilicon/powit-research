@@ -1,0 +1,153 @@
+• turbo 2.10.13
+
+   • Packages in scope: @thoth/powit-core, @thoth/runtime, @thoth/settlement, @thoth/solana
+   • Running test in 4 packages
+   • Remote caching disabled
+
+@thoth/powit-types:build: cache bypass, force executing 0a045d311d51ab26
+@thoth/powit-types:build: $ tsc --project tsconfig.build.json
+@thoth/powit-core:test: cache bypass, force executing e8b55c9ae1831e93
+@thoth/powit-core:build: cache bypass, force executing cb25b8b4d34e59c8
+@thoth/powit-core:test: $ node --experimental-strip-types test/core.test.ts
+@thoth/powit-core:build: $ tsc --project tsconfig.build.json
+@thoth/settlement:build: cache bypass, force executing 67fd00896df8b8a2
+@thoth/settlement:test: cache bypass, force executing f639c0e42c49acf3
+@thoth/settlement:test: $ node --experimental-strip-types test/settlement.test.ts
+@thoth/settlement:build: $ tsc --project tsconfig.build.json
+@thoth/settlement:test: ✔ frozen eight-field settlement record comes only from verified finalized PoWit output (168.9269ms)
+@thoth/settlement:test: ✔ restricted replay distinguishes wrong material, binding, claim, and unsupported version (424.2508ms)
+@thoth/settlement:test: ℹ tests 2
+@thoth/settlement:test: ℹ suites 0
+@thoth/settlement:test: ℹ pass 2
+@thoth/settlement:test: ℹ fail 0
+@thoth/settlement:test: ℹ cancelled 0
+@thoth/settlement:test: ℹ skipped 0
+@thoth/settlement:test: ℹ todo 0
+@thoth/settlement:test: ℹ duration_ms 627.4375
+@thoth/powit-core:test: ✔ E1 CREATE_EVENT after FINALIZING preserves cutoff, frozen bytes and all four Attestation identities (435.8712ms)
+@thoth/powit-core:test: ✔ E1 ACTIVATE_EVENT after FINALIZING preserves cutoff, frozen bytes and all four Attestation identities (332.3158ms)
+@thoth/powit-core:test: ✔ E1 CANCEL_EVENT after FINALIZING preserves cutoff, frozen bytes and all four Attestation identities (455.0996ms)
+@thoth/powit-core:test: ✔ E1 BEGIN_FINALIZATION after FINALIZING preserves cutoff, frozen bytes and all four Attestation identities (278.5204ms)
+@thoth/powit-core:test: ✔ E1 ASSERT_EVENT_SCOPED_UNIQUENESS after FINALIZING preserves cutoff, frozen bytes and all four Attestation identities (409.0165ms)
+@thoth/powit-core:test: ✔ E1 ENROLL after FINALIZING preserves cutoff, frozen bytes and all four Attestation identities (369.1309ms)
+@thoth/powit-core:test: ✔ E1 ACCEPT_COMMITMENT after FINALIZING preserves cutoff, frozen bytes and all four Attestation identities (698.8194ms)
+@thoth/powit-core:test: ✔ E1 ACCEPT_REVEAL after FINALIZING preserves cutoff, frozen bytes and all four Attestation identities (288.9203ms)
+@thoth/powit-core:test: ✔ E1 DISQUALIFY after FINALIZING preserves cutoff, frozen bytes and all four Attestation identities (331.703ms)
+@thoth/powit-core:test: ✔ E1 CREATE_EVENT after ATTESTED preserves cutoff, frozen bytes and all four Attestation identities (203.8454ms)
+@thoth/powit-core:test: ✔ E1 ACTIVATE_EVENT after ATTESTED preserves cutoff, frozen bytes and all four Attestation identities (214.4127ms)
+@thoth/powit-core:test: ✔ E1 CANCEL_EVENT after ATTESTED preserves cutoff, frozen bytes and all four Attestation identities (204.4258ms)
+@thoth/powit-core:test: ✔ E1 BEGIN_FINALIZATION after ATTESTED preserves cutoff, frozen bytes and all four Attestation identities (419.9681ms)
+@thoth/powit-core:test: ✔ E1 ASSERT_EVENT_SCOPED_UNIQUENESS after ATTESTED preserves cutoff, frozen bytes and all four Attestation identities (165.1155ms)
+@thoth/powit-core:test: ✔ E1 ENROLL after ATTESTED preserves cutoff, frozen bytes and all four Attestation identities (157.4622ms)
+@thoth/powit-core:test: ✔ E1 ACCEPT_COMMITMENT after ATTESTED preserves cutoff, frozen bytes and all four Attestation identities (169.5484ms)
+@thoth/powit-core:test: ✔ E1 ACCEPT_REVEAL after ATTESTED preserves cutoff, frozen bytes and all four Attestation identities (266.3261ms)
+@thoth/powit-core:test: ✔ E1 DISQUALIFY after ATTESTED preserves cutoff, frozen bytes and all four Attestation identities (214.0176ms)
+@thoth/powit-core:test: ✔ E1 repeated begin/finalize cannot substitute wall-clock time or add canonical refusals (174.8815ms)
+@thoth/powit-core:test: ✔ E1 a frozen operational refusal precedes invalid metadata and an unavailable fresh clock (559.9119ms)
+@thoth/powit-core:test: ✔ E1 a caller accessor or clock freezing during capture cannot append the outer action (91.3761ms)
+@thoth/powit-core:test: ✔ E1 frozen prefix retains a pre-cutoff rejected input and the contiguous accepted BEGIN (639.8062ms)
+@thoth/powit-core:test: ✔ E2 invalid recordRef on CREATE_EVENT is atomic and corrected retry equals a clean reusable session (140.99ms)
+@thoth/powit-core:test: ✔ E2 invalid recordRef on ACTIVATE_EVENT is atomic and corrected retry equals a clean reusable session (188.1162ms)
+@thoth/powit-core:test: ✔ E2 invalid recordRef on CANCEL_EVENT is atomic and corrected retry equals a clean reusable session (11.7013ms)
+@thoth/powit-core:test: ✔ E2 invalid recordRef on BEGIN_FINALIZATION is atomic and corrected retry equals a clean reusable session (175.3117ms)
+@thoth/powit-core:test: ✔ E2 invalid recordRef on ASSERT_EVENT_SCOPED_UNIQUENESS is atomic and corrected retry equals a clean reusable session (245.6236ms)
+@thoth/powit-core:test: ✔ E2 invalid recordRef on ENROLL is atomic and corrected retry equals a clean reusable session (257.2931ms)
+@thoth/powit-core:test: ✔ E2 invalid recordRef on ACCEPT_COMMITMENT is atomic and corrected retry equals a clean reusable session (204.4359ms)
+@thoth/powit-core:test: ✔ E2 invalid recordRef on ACCEPT_REVEAL is atomic and corrected retry equals a clean reusable session (837.9553ms)
+@thoth/powit-core:test: ✔ E2 invalid recordRef on DISQUALIFY is atomic and corrected retry equals a clean reusable session (756.9743ms)
+@thoth/powit-core:test: ✔ E2 invalid reveal action metadata never consumes records, entitlement or next canonical sequence (1813.0721ms)
+@thoth/powit-core:test: ✔ E2 overlong generated reveal reference fails before mutation and permits a valid explicit reference (51.4827ms)
+@thoth/powit-core:test: ✔ H01-H20 match documented canonical bytes and SHA-256 domains (5.413ms)
+@thoth/powit-core:test: ✔ strict parser rejects duplicate keys, rounded unsafe integers and lone surrogates (0.9118ms)
+@thoth/powit-core:test: ✔ E2E-1 CONCORDANT → CONCORDANT: independent replay reproduces every documented digest (192.4742ms)
+@thoth/powit-core:test: ✔ E2E-2 SPLIT → SPLIT: independent replay reproduces every documented digest (145.7007ms)
+@thoth/powit-core:test: ✔ E2E-3 THIN → THIN: independent replay reproduces every documented digest (228.582ms)
+@thoth/powit-core:test: ✔ E2E-4 SILENT → SILENT: independent replay reproduces every documented digest (44.8199ms)
+@thoth/powit-core:test: ✔ five-participant local execution, freeze, replay and verification (152.6813ms)
+@thoth/powit-core:test: ✔ altered replay inputs and claimed outputs fail verification (239.8436ms)
+@thoth/powit-core:test: ✔ duplicate token and second commitment are rejected without replacing records (13.6478ms)
+@thoth/powit-core:test: ✔ reveal windows, wrong salt and altered payload cannot consume the reveal slot (8.0598ms)
+@thoth/powit-core:test: ✔ matching schema-invalid, explicit abstention and negative reports stay distinct (26.6382ms)
+@thoth/powit-core:test: ✔ non-reveal stays SILENT; prospective revocation does not rewrite a snapshot (6.2129ms)
+@thoth/powit-core:test: ✔ pre-finalization disqualification preserves history and excludes contribution (39.934ms)
+@thoth/powit-core:test: ✔ missing/conflicting claims remain UNKNOWN; failed diversity gives THIN (133.4998ms)
+@thoth/powit-core:test: ✔ client timestamp cannot bypass closed commitment window; sequence is authoritative (27.7341ms)
+@thoth/powit-core:test: ✔ active configuration, history views and finalized Attestation cannot mutate the kernel (49.3664ms)
+@thoth/powit-core:test: ✔ nonempty requiredClaims is rejected until its eligibility rule is specified (1.033ms)
+@thoth/powit-core:test: ✔ timing profile cannot disable the overlap required by commit-time report admission (3.3945ms)
+@thoth/powit-core:test: ✔ event lifecycle permits guarded cancellation and rejects mutation after activation (7.5925ms)
+@thoth/powit-core:test: ✔ evidence null differs from an explicit empty manifest in commitment opening (43.3126ms)
+@thoth/powit-core:test: ℹ tests 53
+@thoth/powit-core:test: ℹ suites 0
+@thoth/powit-core:test: ℹ pass 53
+@thoth/powit-core:test: ℹ fail 0
+@thoth/powit-core:test: ℹ cancelled 0
+@thoth/powit-core:test: ℹ skipped 0
+@thoth/powit-core:test: ℹ todo 0
+@thoth/powit-core:test: ℹ duration_ms 13268.3488
+@thoth/solana:build: cache bypass, force executing 585771d44386350c
+@thoth/solana:test: cache bypass, force executing 3bff8e0db959cbd3
+@thoth/solana:test: $ node --experimental-strip-types test/adapter.test.ts
+@thoth/solana:build: $ tsc --project tsconfig.build.json
+@thoth/solana:test: ✔ frozen eight fields survive binary round trip and retain canonical identity (9.6012ms)
+@thoth/solana:test: ✔ PDA binds complete event ID and distinct attestation versions (289.418ms)
+@thoth/solana:test: ✔ corruption and adapter metadata cannot alter a canonical record unnoticed (31.8198ms)
+@thoth/solana:test: ℹ tests 3
+@thoth/solana:test: ℹ suites 0
+@thoth/solana:test: ℹ pass 3
+@thoth/solana:test: ℹ fail 0
+@thoth/solana:test: ℹ cancelled 0
+@thoth/solana:test: ℹ skipped 0
+@thoth/solana:test: ℹ todo 0
+@thoth/solana:test: ℹ duration_ms 405.2107
+@thoth/runtime:test: cache bypass, force executing 051fadb209ad39c6
+@thoth/runtime:test: $ node --experimental-strip-types test/all.test.ts
+@thoth/runtime:test: ✔ S01 canonical settlement record and successful independent replay match exact documented hashes (189.7555ms)
+@thoth/runtime:test: ✔ S02 two protected storage envelopes preserve one canonical ReplayBundle identity (38.8324ms)
+@thoth/runtime:test: ✔ S03–S05 modified/wrong bundle and wrong anchored Attestation hash fail at distinct stages (148.5128ms)
+@thoth/runtime:test: ✔ commit recovery is authenticated, key-dependent, and not exposed by ordinary inspection or logs (468.8705ms)
+@thoth/runtime:test: ✔ five real HTTP accounts complete one persisted, independently replayable PoWit event (6691.4759ms)
+@thoth/runtime:test: ✔ W05 accepted metadata exposes only the private W05 descriptor and verified bytes (52.5993ms)
+@thoth/runtime:test: ✔ W05 transport supports one bounded byte range and rejects invalid/multiple/unsatisfiable ranges (152.905ms)
+@thoth/runtime:test: ✔ Missing, pending and malformed media never claim readiness (2219.5565ms)
+@thoth/runtime:test: ✔ Verified W05 bytes and the prepared revision cannot silently change before playback (230.1135ms)
+@thoth/runtime:test: ✔ Media exceeding the target needs a reviewed exception, stays bounded and cannot live in a public path (855.2573ms)
+@thoth/runtime:test: ✔ Chamber HTTP exposes only prepared W05 transport and readiness never creates a runtime session (414.9867ms)
+@thoth/runtime:test: ✔ five-person runtime reproduces CONCORDANT from e2e-1 vector inputs across restarts (1694.7348ms)
+@thoth/runtime:test: ✔ five-person runtime reproduces SPLIT from e2e-2 vector inputs across restarts (1515.7136ms)
+@thoth/runtime:test: ✔ five-person runtime reproduces THIN from e2e-3 vector inputs across restarts (1158.7215ms)
+@thoth/runtime:test: ✔ five-person runtime reproduces SILENT from e2e-4 vector inputs across restarts (472.7697ms)
+@thoth/runtime:test: ✔ Chamber: CONTACT_OBSERVED enters actual runtime, survives restart and independently replays to SPLIT (1408.4522ms)
+@thoth/runtime:test: ✔ Chamber: NO_CONTACT_OBSERVED enters actual runtime, survives restart and independently replays to SPLIT (1652.2417ms)
+@thoth/runtime:test: ✔ Chamber: UNABLE_TO_DETERMINE enters actual runtime, survives restart and independently replays to SPLIT (1466.3199ms)
+@thoth/runtime:test: ✔ Chamber HTTP is scoped, hides precommit inputs, rejects rewriting and recovers a repeated finalization (2379.2986ms)
+@thoth/runtime:test: ✔ Chamber save capabilities expire, replace previous links and cannot be replayed concurrently (1645.2673ms)
+@thoth/runtime:test: ✔ Chamber requires a configured manifest key without creating a store or plaintext fallback (1.1736ms)
+@thoth/runtime:test: ✔ Chamber encrypts all orchestration credentials/openings and fresh nonces survive restart and independent replay (1122.5958ms)
+@thoth/runtime:test: ✔ Wrong key, corruption, swapped run binding and legacy plaintext fail without changing stored bytes (732.6953ms)
+@thoth/runtime:test: ✔ An interrupted manifest replacement leaves the prior opening and runtime byte-exact; stale encrypted temporary files are ignored (1004.7912ms)
+@thoth/runtime:test: ✔ A saved opening followed by failed intake locks the original choice and salt across restart and retry (1541.6735ms)
+@thoth/runtime:test: ✔ Failed initialization, manifest save and publication free only owned staging; completed runs retain bounded capacity (7387.9162ms)
+@thoth/runtime:test: ✔ Four labelled synthetic records reproduce the published canonical identities and actual admission/sufficiency meanings (756.3214ms)
+@thoth/runtime:test: ✔ Missing or changed source fixtures fail explicitly without producing substituted outcomes (24.2522ms)
+@thoth/runtime:test: ✔ Synthetic HTTP records are reproducible downloads without creating sessions or consuming capacity (1448.5507ms)
+@thoth/runtime:test: ✔ Runtime frozen input guard preserves 23 actions and control identity through late intake, restart and repeated finalization (3866.5244ms)
+@thoth/runtime:test: ✔ Queued intake observes the accepted finalization cutoff within the same durable transaction (1035.1428ms)
+@thoth/runtime:test: ✔ Failed finalization leaves frozen durable inputs intact and restart retries the original identity (1574.1536ms)
+@thoth/runtime:test: ✔ Previously stored intake after the cutoff is diagnosed without truncating or returning a new identity (1114.2434ms)
+@thoth/runtime:test: ✔ Finalize retry validates the stored canonical Attestation, hash and protected replay without replacing corrupt results (1053.2912ms)
+@thoth/runtime:test: ✔ Finalize retry rejects a valid stored tuple that differs from the retained frozen journal (1655.1931ms)
+@thoth/runtime:test: ✔ Authenticated HTTP intake between begin/finalize cannot mutate frozen inputs; restart finishes and retries unchanged (1091.1631ms)
+@thoth/runtime:test: ℹ tests 36
+@thoth/runtime:test: ℹ suites 0
+@thoth/runtime:test: ℹ pass 36
+@thoth/runtime:test: ℹ fail 0
+@thoth/runtime:test: ℹ cancelled 0
+@thoth/runtime:test: ℹ skipped 0
+@thoth/runtime:test: ℹ todo 0
+@thoth/runtime:test: ℹ duration_ms 50514.0032
+
+ Tasks:    8 successful, 8 total
+Cached:    0 cached, 8 total
+  Time:    1m44.038s 
+

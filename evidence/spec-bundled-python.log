@@ -1,0 +1,12 @@
+{
+  "activeDocuments": 109,
+  "requiredTerms": 25,
+  "historicalHashes": 79,
+  "sourceFilesChecked": 25,
+  "sourceFilesAbsent": 0,
+  "errors": [
+    "docs/decisions/README.md: broken link ../../../Bright%20Workspace/STATE_HANDOFF.md",
+    "protocol/research/assurance/EXISTING_STATE.md: missing from STATUS.md",
+    "protocol/research/assurance/EXISTING_STATE.md: broken link ../../../research/assurance/evidence/baseline.json"
+  ]
+}

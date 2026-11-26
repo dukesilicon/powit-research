@@ -1,0 +1,132 @@
+{
+  "sourceCommit": "6298f49aa4128e51edd44e8dac6457e72e1e8c8a",
+  "sourceBranch": "codex/witnessing-chamber",
+  "scope": "Dirty working-tree bytes on 2026-11-24; commit alone does not reproduce this snapshot",
+  "files": [
+    {
+      "path": "packages/powit-core/src/codec.ts",
+      "sha256": "db27c843bccc0b83d64c59cb04ea42d7bf70fb9f4dcb0b71e49233c668dcdb70",
+      "bytes": 6852
+    },
+    {
+      "path": "packages/powit-core/src/derive.ts",
+      "sha256": "55fbc06b85e62ca94eb4566e76ed8bdb34a890d04fb01487d66f351c254f7fda",
+      "bytes": 8442
+    },
+    {
+      "path": "packages/powit-core/src/index.ts",
+      "sha256": "da3c3d9e08c33e0c904b0b347a6d75d150a481a02f1e451f71150d2cad0a31ad",
+      "bytes": 525
+    },
+    {
+      "path": "packages/powit-core/src/replay.ts",
+      "sha256": "2661a4203bdad201bd1400ec7849f1d1134bdb393ab702f522419ba460f58389",
+      "bytes": 4681
+    },
+    {
+      "path": "packages/powit-core/src/session.ts",
+      "sha256": "a97dd29dfe86e28bd3d1973c71ae0acfc191c187eae90a89d42c2d67161c3243",
+      "bytes": 22638
+    },
+    {
+      "path": "packages/powit-core/src/validation.ts",
+      "sha256": "b4345c1b67e92b426ad3a164bfb8d785c54a12b36276696c01b9990e7c789200",
+      "bytes": 17153
+    },
+    {
+      "path": "packages/powit-core/test/core.test.ts",
+      "sha256": "d3ca323224a12628dd505f4252deaaa9a89005af94d74a461a51d882d59fdb09",
+      "bytes": 18209
+    },
+    {
+      "path": "packages/powit-core/test/session-boundary.test.ts",
+      "sha256": "e44d50c952443bd3e406e354ec5f3572bd56c6e3a67d76128cc6652b364f97f1",
+      "bytes": 18546
+    },
+    {
+      "path": "packages/powit-core/README.md",
+      "sha256": "899c0d24c610383c6d425a11f188359a8450aafb90cab35f21613abc851d4cdc",
+      "bytes": 3159
+    },
+    {
+      "path": "packages/powit-types/src/index.ts",
+      "sha256": "f284533402af1781385621c8bb90be1860787400acc9a362fd082dbbe801f42c",
+      "bytes": 8269
+    },
+    {
+      "path": "protocol/powit/v0/POWIT_V0_OPEN_QUESTIONS.md",
+      "sha256": "a40291c2575d29e4a89012ab3e8136e9132ee141870981df5a13d718ece390b0",
+      "bytes": 12596
+    },
+    {
+      "path": "protocol/powit/v0/POWIT_V0_SPEC.md",
+      "sha256": "832273aa7988b3160905ac2dc0f394a079c80791a4522006a74bec0d5ba64390",
+      "bytes": 20908
+    },
+    {
+      "path": "protocol/powit/v0/POWIT_V0_TEST_VECTORS.md",
+      "sha256": "458276315b4c30b88229f8a45fdb24b5f5f74acf0e4a0785c4f9eaf960c924d7",
+      "bytes": 248074
+    },
+    {
+      "path": "protocol/powit/v0/POWIT_V0_TYPES.md",
+      "sha256": "904c28fb4d402d23ccc2212b1141ba98bf4f73e37e1baa710e207681f2a45f99",
+      "bytes": 35207
+    },
+    {
+      "path": "protocol/overview/terminology.md",
+      "sha256": "e5ae67e1a6c50965d5130f92df796ba711da1b64a744d2a1b6466bb3b2d9f4ff",
+      "bytes": 13910
+    },
+    {
+      "path": "protocol/overview/document-governance.md",
+      "sha256": "6d07b0063a8797a5d2d820b4fc1d4237dcf9175db68323cc9d0adc18f2052091",
+      "bytes": 3008
+    },
+    {
+      "path": "protocol/reference/canonical-lifecycle.md",
+      "sha256": "410610aa35d60d879b4ea968796791d5465590d830e702f16f6da02f114cd8e8",
+      "bytes": 1637
+    },
+    {
+      "path": "docs/decisions/ADR-001-powit-thoth-separation.md",
+      "sha256": "2118c4c185608175bea78ee4eee0b88a687de2609f5d4508c8affabe2b50c51e",
+      "bytes": 1892
+    },
+    {
+      "path": "docs/decisions/ADR-002-selective-linkability.md",
+      "sha256": "49510267ce2bd1487a2e40b3046e568bbf19cce1060de2e6701d0ec02421d3eb",
+      "bytes": 1973
+    },
+    {
+      "path": "docs/decisions/ADR-003-solana-as-preferred-settlement.md",
+      "sha256": "320f7a732fdad5a2b631d33727a841cc7821e7760652047106e007088734271b",
+      "bytes": 1986
+    },
+    {
+      "path": "docs/decisions/ADR-004-disagreement-preservation.md",
+      "sha256": "30d1987ef1995a9c952ad78c24498c82c3e3bb16bf4738b31c6a98225ac5a0eb",
+      "bytes": 2158
+    },
+    {
+      "path": "docs/decisions/ADR-005-independence-vs-reputation.md",
+      "sha256": "8f115ae0ec4534fe1903266171e5e6dd75fd315f6108a0bd83942828d2fd4ada",
+      "bytes": 1905
+    },
+    {
+      "path": "docs/decisions/ADR-006-powit-v0-semantic-freeze.md",
+      "sha256": "a9acb5fbf69f7f0ea8299a524d3d4b59ae09ecff5767df31002d49107bf20695",
+      "bytes": 4617
+    },
+    {
+      "path": "docs/decisions/ADR-007-powit-v0-executable-policy-profile.md",
+      "sha256": "db609dfc40f8bb065ec5a32257d0248de1a044224f75e8fc93f89ec5c4b6fb41",
+      "bytes": 4735
+    },
+    {
+      "path": "docs/decisions/ADR-008-thoth-v0-settlement-profile.md",
+      "sha256": "b181b12df598545d66022d7216b727c5e3c55c74ada1278f662945dbfa07c925",
+      "bytes": 3878
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+/** Canonical PoWit v0 wire shapes. Semantics live in protocol/powit/v0/. */
+export type J = null | boolean | number | string | J[] | { [key: string]: J };
+export type Id = string;
+export type Hash = string;
+export type Time = number;
+export type Count = number;
+export type Path = Id[];
+export type EventState = 'DRAFT' | 'ACTIVE' | 'FINALIZING' | 'ATTESTED' | 'CANCELLED';
+export type EpistemicState = 'CONCORDANT' | 'SPLIT' | 'THIN' | 'SILENT';
+export type PolicyRef = { policyId: Id; policyVersion: Id; definitionHash: Hash };
+export type PolicyDefinition = { policy: PolicyRef; definition: J };
+export type EventSchema = {
+  protocolVersion: 'powit-v0'; schemaId: Id; schemaVersion: Id;
+  observationSchema: PolicyRef; witnessEligibilityPolicy: PolicyRef; requiredClaims: Id[];
+  relationPolicy: PolicyRef; relationalDiversityPolicy: PolicyRef; sufficiencyPolicy: PolicyRef;
+  aggregationPolicy: PolicyRef; timingPolicy: PolicyRef;
+  evidencePolicy: PolicyRef | null; authenticationPolicy: PolicyRef | null; challengePolicy: PolicyRef | null;
+};
+export type Windows = {
+  enrollmentOpensAt: Time; enrollmentClosesAt: Time;
+  observationOpensAt: Time; observationClosesAt: Time;
+  commitOpensAt: Time; commitClosesAt: Time;
+  revealOpensAt: Time; revealClosesAt: Time;
+};
+export type EventDefinition = { protocolVersion: 'powit-v0'; eventId: Id; schemaId: Id; schemaVersion: Id; schemaHash: Hash; windows: Windows; configuration: J };
+export type Event = { definition: EventDefinition; state: EventState };
+export type EventScopedUniquenessAssertion = { eventId: Id; uniquenessToken: Id; assuranceProvider: Id; assuranceMethod: PolicyRef; assertedAt: Time; validUntil: Time | null };
+export type WitnessParticipation = { eventId: Id; participationId: Id; witnessClasses: Id[]; enrolledAt: Time; uniquenessAssertionHash: Hash };
+export type CredentialReference = { issuerId: Id; credentialRef: string; proofRef: string | null };
+export type Claim = {
+  eventId: Id; claimId: Id; subjectParticipationId: Id; claimType: Id; value: J | null;
+  credential: CredentialReference | null; provenance: 'SELF_DECLARED' | 'CREDENTIAL' | 'PRESENCE' | 'THIRD_PARTY' | 'DERIVED';
+  verificationState: 'VERIFIED' | 'UNVERIFIED' | 'INVALID'; verificationPolicy: PolicyRef | null;
+  validFrom: Time; validUntil: Time | null;
+};
+export type QualificationSnapshot = { eventId: Id; participationId: Id; schemaHash: Hash; policy: PolicyRef; evaluatedAt: Time; relevantAt: Time; claims: Claim[]; eligible: true };
+export type Observation = { eventId: Id; witnessParticipationId: Id; observedAt: Time; report: J; evidenceManifestHash: Hash | null };
+export type CommitmentPreimage = { eventId: Id; witnessParticipationId: Id; observationHash: Hash; evidenceManifestHash: Hash | null; salt: string };
+export type CommitmentRecord = { eventId: Id; witnessParticipationId: Id; commitmentHash: Hash; acceptedAt: Time; qualificationSnapshot: QualificationSnapshot };
+export type EvidenceArtifact = { artifactId: Id; submittedByParticipationId: Id; digestAlgorithm: 'SHA-256'; contentHash: Hash; byteLength: Count; mediaType: string };
+export type EvidenceManifest = { eventId: Id; witnessParticipationId: Id; artifacts: EvidenceArtifact[] };
+export type RevealValidation = 'ADMITTED_OBSERVATION' | 'EXPLICIT_ABSTENTION' | 'INVALID_OBSERVATION';
+export type RevealRecord = { eventId: Id; witnessParticipationId: Id; candidateObservation: J; evidenceManifest: EvidenceManifest | null; salt: string; receivedAt: Time; validation: RevealValidation; validationReasons: Id[] };
+export type RelationStatus = 'KNOWN_RELATED' | 'KNOWN_DISTINCT' | 'UNKNOWN';
+export type Relation = { leftParticipationId: Id; rightParticipationId: Id; dimension: Id; status: RelationStatus; claimIds: Id[] };
+export type RelationConflict = { participationId: Id; dimension: Id; claimIds: Id[]; canonicalValues: { canonicalValue: J; claimIds: Id[] }[] };
+export type RelationGraph = { eventId: Id; policy: PolicyRef; participantIds: Id[]; dimensions: Id[]; relations: Relation[]; conflicts: RelationConflict[] };
+export type RequirementEvaluation = { requirementId: Id; operator: 'MIN_ACCEPTED_OBSERVATIONS' | 'MIN_DISTINCT_VERIFIED_VALUES'; parameters: J; observedValue: Count; passed: boolean; claimIds: Id[]; relationKeys: [Id, Id, Id][] };
+export type SufficiencyEvaluation = { eventId: Id; policy: PolicyRef; requirements: RequirementEvaluation[]; overallSufficient: boolean };
+export type AggregationResult = { eventId: Id; policy: PolicyRef; reducer: 'EXACT_MATCH'; materialClaimPath: Path; assessment: 'CONVERGENT' | 'MATERIALLY_DIVIDED'; values: { canonicalValue: J; observationCount: Count; participationIds: Id[] }[] };
+export type Attestation = { protocolVersion: 'powit-v0'; eventId: Id; eventHash: Hash; schemaHash: Hash; acceptedParticipationSetHash: Hash; acceptedObservationSetHash: Hash; relationGraphHash: Hash; sufficiencyEvaluationHash: Hash; aggregationResultHash: Hash | null; replayInputHash: Hash; epistemicState: EpistemicState; version: Count; supersedes: Hash | null; finalizingAt: Time };
+export type CoreActionType = 'CREATE_EVENT' | 'ACTIVATE_EVENT' | 'CANCEL_EVENT' | 'BEGIN_FINALIZATION' | 'ASSERT_EVENT_SCOPED_UNIQUENESS' | 'ENROLL' | 'ACCEPT_COMMITMENT' | 'ACCEPT_REVEAL' | 'DISQUALIFY';
+export type IntakeDecision = { sequence: Count; actionType: CoreActionType; actorId: Id; participationId: Id | null; decision: 'ACCEPTED' | 'REJECTED'; authoritativeAt: Time; clientTimestamp: Time | null; recordRef: Id | Hash | null; reasonCodes: Id[]; input: J };
+export type LifecycleRecord = { sequence: Count; from: EventState | null; to: EventState; authoritativeAt: Time };
+export type DisqualificationRecord = { eventId: Id; participationId: Id; sequence: Count; decidedAt: Time; reasonCode: Id; evidenceRefs: Hash[] };
+export type ClaimedObservationOutcome = { participationId: Id; sequence: Count; outcome: RevealValidation; reasonCodes: Id[] };
+export type ReplayBundle = {
+  protocolVersion: 'powit-v0'; eventSchema: EventSchema; policyDefinitions: PolicyDefinition[]; eventDefinition: EventDefinition;
+  lifecycle: LifecycleRecord[]; uniquenessAssertions: EventScopedUniquenessAssertion[]; participations: WitnessParticipation[];
+  qualificationSnapshots: QualificationSnapshot[]; commitments: CommitmentRecord[]; reveals: RevealRecord[];
+  intakeDecisions: IntakeDecision[]; disqualifications: DisqualificationRecord[];
+  claimedObservationOutcomes: ClaimedObservationOutcome[]; claimedAdmittedObservations: Observation[];
+  claimedRelationGraph: RelationGraph; claimedSufficiencyEvaluation: SufficiencyEvaluation;
+  claimedAggregationResult: AggregationResult | null; claimedEpistemicState: EpistemicState;
+};
+
+export type ObservationSchemaPolicy = { policyKind: 'OBSERVATION_SCHEMA_V0'; requiredPaths: Path[]; materialClaimPath: Path; abstentionPath: Path | null };
+export type WitnessEligibilityPolicy = { policyKind: 'WITNESS_ELIGIBILITY_V0'; assuranceProviders: Id[]; acceptedAssuranceMethods: PolicyRef[]; disqualificationAuthorities: Id[] };
+export type RelationDimension = { dimensionId: Id; claimType: Id; claimPath: Path; valueType: 'STRING' | 'BOOLEAN' | 'INTEGER' | 'ARRAY' | 'OBJECT'; normalization: 'JCS_VALUE'; relevantAt: 'QUALIFICATION_RELEVANT_AT'; acceptedVerificationPolicies: PolicyRef[] };
+export type RelationPolicy = { policyKind: 'RELATION_CLAIM_VALUE_EQUALITY_V0'; dimensions: RelationDimension[] };
+export type AssuranceMethodPolicy = { policyKind: 'UPSTREAM_ASSURANCE_METHOD_V0'; provider: Id; method: Id };
+export type ClaimVerificationPolicy = { policyKind: 'CLAIM_VERIFICATION_V0'; issuerId: Id };
+export type DiversityPolicy = { policyKind: 'RELATIONAL_DIVERSITY_V0'; distinctValueDimensions: Id[] };
+export type SufficiencyRequirement = { requirementId: Id; operator: 'MIN_ACCEPTED_OBSERVATIONS'; minimum: Count } | { requirementId: Id; operator: 'MIN_DISTINCT_VERIFIED_VALUES'; dimension: Id; minimum: Count };
+export type SufficiencyPolicy = { policyKind: 'SUFFICIENCY_V0'; requirements: SufficiencyRequirement[] };
+export type AggregationPolicy = { policyKind: 'AGGREGATION_V0'; reducer: 'EXACT_MATCH' };
+export type TimingPolicy = { policyKind: 'TIMING_V0'; observationTimeAuthority: 'PROTOCOL_ACCEPTANCE'; allowObservationCommitOverlap: boolean };

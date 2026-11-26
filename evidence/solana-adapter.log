@@ -1,0 +1,12 @@
+$ node --experimental-strip-types test/adapter.test.ts
+✔ frozen eight fields survive binary round trip and retain canonical identity (3.1925ms)
+✔ PDA binds complete event ID and distinct attestation versions (96.8285ms)
+✔ corruption and adapter metadata cannot alter a canonical record unnoticed (3.357ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 120.075

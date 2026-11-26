@@ -1,0 +1,45 @@
+$ node --experimental-strip-types test/all.test.ts
+✔ S01 canonical settlement record and successful independent replay match exact documented hashes (76.2144ms)
+✔ S02 two protected storage envelopes preserve one canonical ReplayBundle identity (25.8612ms)
+✔ S03–S05 modified/wrong bundle and wrong anchored Attestation hash fail at distinct stages (83.0612ms)
+✔ Chamber: CONTACT_OBSERVED enters actual runtime, survives restart and independently replays to SPLIT (2399.0258ms)
+✔ Chamber: NO_CONTACT_OBSERVED enters actual runtime, survives restart and independently replays to SPLIT (1774.2735ms)
+✔ Chamber: UNABLE_TO_DETERMINE enters actual runtime, survives restart and independently replays to SPLIT (2359.6448ms)
+✔ Chamber HTTP is scoped, hides precommit inputs, rejects rewriting and recovers a repeated finalization (3297.9828ms)
+✔ Chamber save capabilities expire, replace previous links and cannot be replayed concurrently (1070.4536ms)
+✔ five real HTTP accounts complete one persisted, independently replayable PoWit event (2443.9765ms)
+✔ commit recovery is authenticated, key-dependent, and not exposed by ordinary inspection or logs (145.7321ms)
+✔ five-person runtime reproduces CONCORDANT from e2e-1 vector inputs across restarts (821.5906ms)
+✔ five-person runtime reproduces SPLIT from e2e-2 vector inputs across restarts (954.5992ms)
+✔ five-person runtime reproduces THIN from e2e-3 vector inputs across restarts (1384.0205ms)
+✔ five-person runtime reproduces SILENT from e2e-4 vector inputs across restarts (692.6972ms)
+✔ Runtime frozen input guard preserves 23 actions and control identity through late intake, restart and repeated finalization (1405.8024ms)
+✔ Queued intake observes the accepted finalization cutoff within the same durable transaction (897.5317ms)
+✔ Failed finalization leaves frozen durable inputs intact and restart retries the original identity (817.2713ms)
+✔ Previously stored intake after the cutoff is diagnosed without truncating or returning a new identity (737.3451ms)
+✔ Finalize retry validates the stored canonical Attestation, hash and protected replay without replacing corrupt results (930.0852ms)
+✔ Finalize retry rejects a valid stored tuple that differs from the retained frozen journal (1427.647ms)
+✔ Authenticated HTTP intake between begin/finalize cannot mutate frozen inputs; restart finishes and retries unchanged (939.2486ms)
+✔ W05 accepted metadata exposes only the private W05 descriptor and verified bytes (23.0086ms)
+✔ W05 transport supports one bounded byte range and rejects invalid/multiple/unsatisfiable ranges (88.0442ms)
+✔ Missing, pending and malformed media never claim readiness (339.8189ms)
+✔ Verified W05 bytes and the prepared revision cannot silently change before playback (56.4699ms)
+✔ Media exceeding the target needs a reviewed exception, stays bounded and cannot live in a public path (145.2567ms)
+✔ Chamber HTTP exposes only prepared W05 transport and readiness never creates a runtime session (194.7968ms)
+✔ Chamber requires a configured manifest key without creating a store or plaintext fallback (2.5123ms)
+✔ Chamber encrypts all orchestration credentials/openings and fresh nonces survive restart and independent replay (2039.9857ms)
+✔ Wrong key, corruption, swapped run binding and legacy plaintext fail without changing stored bytes (816.2266ms)
+✔ An interrupted manifest replacement leaves the prior opening and runtime byte-exact; stale encrypted temporary files are ignored (1631.8092ms)
+✔ A saved opening followed by failed intake locks the original choice and salt across restart and retry (1563.0207ms)
+✔ Failed initialization, manifest save and publication free only owned staging; completed runs retain bounded capacity (6123.5038ms)
+✔ Four labelled synthetic records reproduce the published canonical identities and actual admission/sufficiency meanings (762.4136ms)
+✔ Missing or changed source fixtures fail explicitly without producing substituted outcomes (21.1729ms)
+✔ Synthetic HTTP records are reproducible downloads without creating sessions or consuming capacity (1795.7567ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 40515.069

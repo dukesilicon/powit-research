@@ -1,0 +1,1988 @@
+{
+  "kind": "THOTH_CHAMBER_SYNTHETIC_RECORD_V1",
+  "scenario": "powit-v0-e2e-3",
+  "attestation": {
+    "protocolVersion": "powit-v0",
+    "eventId": "e2e-3-thin",
+    "eventHash": "bc119d37bf038fc8f1ea859fc2db72f27e6cdc3c78f663138c7c65139611b5b7",
+    "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+    "acceptedParticipationSetHash": "64c216ba6517aa6bad818fc4dedffd0967365759f8646d308c253dcbe1161c0f",
+    "acceptedObservationSetHash": "500f190758bec8ef2a774edfa42c9bfaa228fc4f8527dca92a2459331a0a9c8a",
+    "relationGraphHash": "6f86f7547741d9a292e4f39ac3cf6969eb431a822e101db09574366f595c3440",
+    "sufficiencyEvaluationHash": "b26cad631afa364850e87ee6e922f6976050495b7643a316090067f661d6858c",
+    "aggregationResultHash": "895e282b79d09434e1950e2e960cac44e4a14eab74c90b2558d9b46ddabe3273",
+    "replayInputHash": "b1071e4dc392798e61ae1fe96ada0c568ec47d51cb48e16f049bc46a1b1afb62",
+    "epistemicState": "THIN",
+    "version": 1,
+    "supersedes": null,
+    "finalizingAt": 400
+  },
+  "attestationHash": "758652a08d992811631734eb45208569cfc2f8ea24c2b40d84af40f5f5e1d718",
+  "bundle": {
+    "protocolVersion": "powit-v0",
+    "eventSchema": {
+      "protocolVersion": "powit-v0",
+      "schemaId": "fixture-schema",
+      "schemaVersion": "1",
+      "observationSchema": {
+        "policyId": "observation-1",
+        "policyVersion": "1",
+        "definitionHash": "267ad88d8574883e8456487d559bb96586846fbcfba7d865320bf29f87e08657"
+      },
+      "witnessEligibilityPolicy": {
+        "policyId": "eligibility-1",
+        "policyVersion": "1",
+        "definitionHash": "9c17a8bb9bfa4879853534710fbb641c0220538965a13a71cb7f5b8e6d77df83"
+      },
+      "requiredClaims": [],
+      "relationPolicy": {
+        "policyId": "relations-1",
+        "policyVersion": "1",
+        "definitionHash": "2daac105dce8b68896e4af1169e66ee7a1ee3b60497a9ded9a5c1371d4937360"
+      },
+      "relationalDiversityPolicy": {
+        "policyId": "diversity-1",
+        "policyVersion": "1",
+        "definitionHash": "a9ef31f0bdb2ce33a82a0902d210f7c51a782e5e192564dbe02f9d2859e37ba2"
+      },
+      "sufficiencyPolicy": {
+        "policyId": "sufficiency-1",
+        "policyVersion": "1",
+        "definitionHash": "edb6d241076b2bc81e2d7bd5718f79f57ef81d88228ea7b378506644cdc5d584"
+      },
+      "aggregationPolicy": {
+        "policyId": "aggregation-1",
+        "policyVersion": "1",
+        "definitionHash": "4a9fe3d36cc3d62f095fec226f247f71ee895b32d5575eab22c75398e8e50d10"
+      },
+      "timingPolicy": {
+        "policyId": "timing-1",
+        "policyVersion": "1",
+        "definitionHash": "29efab2aa14fa56901e399eeaedd8390e149b4b42481892d0a4f6a66e7297fd3"
+      },
+      "evidencePolicy": null,
+      "authenticationPolicy": null,
+      "challengePolicy": null
+    },
+    "policyDefinitions": [
+      {
+        "policy": {
+          "policyId": "aggregation-1",
+          "policyVersion": "1",
+          "definitionHash": "4a9fe3d36cc3d62f095fec226f247f71ee895b32d5575eab22c75398e8e50d10"
+        },
+        "definition": {
+          "policyKind": "AGGREGATION_V0",
+          "reducer": "EXACT_MATCH"
+        }
+      },
+      {
+        "policy": {
+          "policyId": "assurance-method-1",
+          "policyVersion": "1",
+          "definitionHash": "6c3939f9581d59ea5cc3a6a6fe6555a6f81f3db0d56fe0c4c8a10687bb3c9317"
+        },
+        "definition": {
+          "policyKind": "UPSTREAM_ASSURANCE_METHOD_V0",
+          "provider": "fixture-provider",
+          "method": "controlled-deterministic-test-issuer"
+        }
+      },
+      {
+        "policy": {
+          "policyId": "diversity-1",
+          "policyVersion": "1",
+          "definitionHash": "a9ef31f0bdb2ce33a82a0902d210f7c51a782e5e192564dbe02f9d2859e37ba2"
+        },
+        "definition": {
+          "policyKind": "RELATIONAL_DIVERSITY_V0",
+          "distinctValueDimensions": [
+            "organization"
+          ]
+        }
+      },
+      {
+        "policy": {
+          "policyId": "eligibility-1",
+          "policyVersion": "1",
+          "definitionHash": "9c17a8bb9bfa4879853534710fbb641c0220538965a13a71cb7f5b8e6d77df83"
+        },
+        "definition": {
+          "policyKind": "WITNESS_ELIGIBILITY_V0",
+          "assuranceProviders": [
+            "fixture-provider"
+          ],
+          "acceptedAssuranceMethods": [
+            {
+              "policyId": "assurance-method-1",
+              "policyVersion": "1",
+              "definitionHash": "6c3939f9581d59ea5cc3a6a6fe6555a6f81f3db0d56fe0c4c8a10687bb3c9317"
+            }
+          ],
+          "disqualificationAuthorities": [
+            "fixture-provider"
+          ]
+        }
+      },
+      {
+        "policy": {
+          "policyId": "observation-1",
+          "policyVersion": "1",
+          "definitionHash": "267ad88d8574883e8456487d559bb96586846fbcfba7d865320bf29f87e08657"
+        },
+        "definition": {
+          "policyKind": "OBSERVATION_SCHEMA_V0",
+          "requiredPaths": [
+            [
+              "occurred"
+            ]
+          ],
+          "materialClaimPath": [
+            "occurred"
+          ],
+          "abstentionPath": [
+            "abstain"
+          ]
+        }
+      },
+      {
+        "policy": {
+          "policyId": "relations-1",
+          "policyVersion": "1",
+          "definitionHash": "2daac105dce8b68896e4af1169e66ee7a1ee3b60497a9ded9a5c1371d4937360"
+        },
+        "definition": {
+          "policyKind": "RELATION_CLAIM_VALUE_EQUALITY_V0",
+          "dimensions": [
+            {
+              "dimensionId": "organization",
+              "claimType": "organization",
+              "claimPath": [
+                "org"
+              ],
+              "valueType": "STRING",
+              "normalization": "JCS_VALUE",
+              "relevantAt": "QUALIFICATION_RELEVANT_AT",
+              "acceptedVerificationPolicies": [
+                {
+                  "policyId": "verification-1",
+                  "policyVersion": "1",
+                  "definitionHash": "f14cf084721b80ac8f1918e331880a73e128b487172dcb29c880ef36523929b7"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "policy": {
+          "policyId": "sufficiency-1",
+          "policyVersion": "1",
+          "definitionHash": "edb6d241076b2bc81e2d7bd5718f79f57ef81d88228ea7b378506644cdc5d584"
+        },
+        "definition": {
+          "policyKind": "SUFFICIENCY_V0",
+          "requirements": [
+            {
+              "requirementId": "minimum-observations",
+              "operator": "MIN_ACCEPTED_OBSERVATIONS",
+              "minimum": 3
+            },
+            {
+              "requirementId": "distinct-organizations",
+              "operator": "MIN_DISTINCT_VERIFIED_VALUES",
+              "dimension": "organization",
+              "minimum": 3
+            }
+          ]
+        }
+      },
+      {
+        "policy": {
+          "policyId": "timing-1",
+          "policyVersion": "1",
+          "definitionHash": "29efab2aa14fa56901e399eeaedd8390e149b4b42481892d0a4f6a66e7297fd3"
+        },
+        "definition": {
+          "policyKind": "TIMING_V0",
+          "observationTimeAuthority": "PROTOCOL_ACCEPTANCE",
+          "allowObservationCommitOverlap": true
+        }
+      },
+      {
+        "policy": {
+          "policyId": "verification-1",
+          "policyVersion": "1",
+          "definitionHash": "f14cf084721b80ac8f1918e331880a73e128b487172dcb29c880ef36523929b7"
+        },
+        "definition": {
+          "policyKind": "CLAIM_VERIFICATION_V0",
+          "issuerId": "fixture-issuer"
+        }
+      }
+    ],
+    "eventDefinition": {
+      "protocolVersion": "powit-v0",
+      "eventId": "e2e-3-thin",
+      "schemaId": "fixture-schema",
+      "schemaVersion": "1",
+      "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+      "windows": {
+        "enrollmentOpensAt": 10,
+        "enrollmentClosesAt": 100,
+        "observationOpensAt": 100,
+        "observationClosesAt": 300,
+        "commitOpensAt": 100,
+        "commitClosesAt": 300,
+        "revealOpensAt": 300,
+        "revealClosesAt": 400
+      },
+      "configuration": {}
+    },
+    "lifecycle": [
+      {
+        "sequence": 1,
+        "from": null,
+        "to": "DRAFT",
+        "authoritativeAt": 0
+      },
+      {
+        "sequence": 2,
+        "from": "DRAFT",
+        "to": "ACTIVE",
+        "authoritativeAt": 0
+      },
+      {
+        "sequence": 23,
+        "from": "ACTIVE",
+        "to": "FINALIZING",
+        "authoritativeAt": 400
+      }
+    ],
+    "uniquenessAssertions": [
+      {
+        "eventId": "e2e-3-thin",
+        "uniquenessToken": "token-1",
+        "assuranceProvider": "fixture-provider",
+        "assuranceMethod": {
+          "policyId": "assurance-method-1",
+          "policyVersion": "1",
+          "definitionHash": "6c3939f9581d59ea5cc3a6a6fe6555a6f81f3db0d56fe0c4c8a10687bb3c9317"
+        },
+        "assertedAt": 50,
+        "validUntil": 500
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "uniquenessToken": "token-2",
+        "assuranceProvider": "fixture-provider",
+        "assuranceMethod": {
+          "policyId": "assurance-method-1",
+          "policyVersion": "1",
+          "definitionHash": "6c3939f9581d59ea5cc3a6a6fe6555a6f81f3db0d56fe0c4c8a10687bb3c9317"
+        },
+        "assertedAt": 50,
+        "validUntil": 500
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "uniquenessToken": "token-3",
+        "assuranceProvider": "fixture-provider",
+        "assuranceMethod": {
+          "policyId": "assurance-method-1",
+          "policyVersion": "1",
+          "definitionHash": "6c3939f9581d59ea5cc3a6a6fe6555a6f81f3db0d56fe0c4c8a10687bb3c9317"
+        },
+        "assertedAt": 50,
+        "validUntil": 500
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "uniquenessToken": "token-4",
+        "assuranceProvider": "fixture-provider",
+        "assuranceMethod": {
+          "policyId": "assurance-method-1",
+          "policyVersion": "1",
+          "definitionHash": "6c3939f9581d59ea5cc3a6a6fe6555a6f81f3db0d56fe0c4c8a10687bb3c9317"
+        },
+        "assertedAt": 50,
+        "validUntil": 500
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "uniquenessToken": "token-5",
+        "assuranceProvider": "fixture-provider",
+        "assuranceMethod": {
+          "policyId": "assurance-method-1",
+          "policyVersion": "1",
+          "definitionHash": "6c3939f9581d59ea5cc3a6a6fe6555a6f81f3db0d56fe0c4c8a10687bb3c9317"
+        },
+        "assertedAt": 50,
+        "validUntil": 500
+      }
+    ],
+    "participations": [
+      {
+        "eventId": "e2e-3-thin",
+        "participationId": "w1",
+        "witnessClasses": [
+          "observer"
+        ],
+        "enrolledAt": 50,
+        "uniquenessAssertionHash": "85870676ee6967388c1f6caf38f8cb1db5a74abc123c3585fda5a26d97989928"
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "participationId": "w2",
+        "witnessClasses": [
+          "observer"
+        ],
+        "enrolledAt": 50,
+        "uniquenessAssertionHash": "39a070f27999e88a6e1e8248a238fc3804d0b481b53b0aaef75532d80dc22091"
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "participationId": "w3",
+        "witnessClasses": [
+          "observer"
+        ],
+        "enrolledAt": 50,
+        "uniquenessAssertionHash": "f94aea3059114f0dc220bc9fd5f7784f2d692fb000365ca7feff8602f4550a23"
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "participationId": "w4",
+        "witnessClasses": [
+          "observer"
+        ],
+        "enrolledAt": 50,
+        "uniquenessAssertionHash": "22a6d93420861f53607335fd12c8b79e03e62e7115f94c8e92e915772dc67861"
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "participationId": "w5",
+        "witnessClasses": [
+          "observer"
+        ],
+        "enrolledAt": 50,
+        "uniquenessAssertionHash": "de7b7683b3bb07086d94c81751f2b5103343e6fe4792fca08984eea14b10d722"
+      }
+    ],
+    "qualificationSnapshots": [
+      {
+        "eventId": "e2e-3-thin",
+        "participationId": "w1",
+        "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+        "policy": {
+          "policyId": "eligibility-1",
+          "policyVersion": "1",
+          "definitionHash": "9c17a8bb9bfa4879853534710fbb641c0220538965a13a71cb7f5b8e6d77df83"
+        },
+        "evaluatedAt": 200,
+        "relevantAt": 150,
+        "claims": [
+          {
+            "eventId": "e2e-3-thin",
+            "claimId": "claim-org-w1",
+            "subjectParticipationId": "w1",
+            "claimType": "organization",
+            "value": {
+              "org": "org-shared"
+            },
+            "credential": {
+              "issuerId": "fixture-issuer",
+              "credentialRef": "credential-w1",
+              "proofRef": "proof-w1"
+            },
+            "provenance": "CREDENTIAL",
+            "verificationState": "VERIFIED",
+            "verificationPolicy": {
+              "policyId": "verification-1",
+              "policyVersion": "1",
+              "definitionHash": "f14cf084721b80ac8f1918e331880a73e128b487172dcb29c880ef36523929b7"
+            },
+            "validFrom": 0,
+            "validUntil": 1000
+          }
+        ],
+        "eligible": true
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "participationId": "w2",
+        "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+        "policy": {
+          "policyId": "eligibility-1",
+          "policyVersion": "1",
+          "definitionHash": "9c17a8bb9bfa4879853534710fbb641c0220538965a13a71cb7f5b8e6d77df83"
+        },
+        "evaluatedAt": 200,
+        "relevantAt": 150,
+        "claims": [
+          {
+            "eventId": "e2e-3-thin",
+            "claimId": "claim-org-w2",
+            "subjectParticipationId": "w2",
+            "claimType": "organization",
+            "value": {
+              "org": "org-shared"
+            },
+            "credential": {
+              "issuerId": "fixture-issuer",
+              "credentialRef": "credential-w2",
+              "proofRef": "proof-w2"
+            },
+            "provenance": "CREDENTIAL",
+            "verificationState": "VERIFIED",
+            "verificationPolicy": {
+              "policyId": "verification-1",
+              "policyVersion": "1",
+              "definitionHash": "f14cf084721b80ac8f1918e331880a73e128b487172dcb29c880ef36523929b7"
+            },
+            "validFrom": 0,
+            "validUntil": 1000
+          }
+        ],
+        "eligible": true
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "participationId": "w3",
+        "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+        "policy": {
+          "policyId": "eligibility-1",
+          "policyVersion": "1",
+          "definitionHash": "9c17a8bb9bfa4879853534710fbb641c0220538965a13a71cb7f5b8e6d77df83"
+        },
+        "evaluatedAt": 200,
+        "relevantAt": 150,
+        "claims": [
+          {
+            "eventId": "e2e-3-thin",
+            "claimId": "claim-org-w3",
+            "subjectParticipationId": "w3",
+            "claimType": "organization",
+            "value": {
+              "org": "org-shared"
+            },
+            "credential": {
+              "issuerId": "fixture-issuer",
+              "credentialRef": "credential-w3",
+              "proofRef": "proof-w3"
+            },
+            "provenance": "CREDENTIAL",
+            "verificationState": "VERIFIED",
+            "verificationPolicy": {
+              "policyId": "verification-1",
+              "policyVersion": "1",
+              "definitionHash": "f14cf084721b80ac8f1918e331880a73e128b487172dcb29c880ef36523929b7"
+            },
+            "validFrom": 0,
+            "validUntil": 1000
+          }
+        ],
+        "eligible": true
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "participationId": "w4",
+        "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+        "policy": {
+          "policyId": "eligibility-1",
+          "policyVersion": "1",
+          "definitionHash": "9c17a8bb9bfa4879853534710fbb641c0220538965a13a71cb7f5b8e6d77df83"
+        },
+        "evaluatedAt": 200,
+        "relevantAt": 150,
+        "claims": [
+          {
+            "eventId": "e2e-3-thin",
+            "claimId": "claim-org-w4",
+            "subjectParticipationId": "w4",
+            "claimType": "organization",
+            "value": {
+              "org": "org-shared"
+            },
+            "credential": {
+              "issuerId": "fixture-issuer",
+              "credentialRef": "credential-w4",
+              "proofRef": "proof-w4"
+            },
+            "provenance": "CREDENTIAL",
+            "verificationState": "VERIFIED",
+            "verificationPolicy": {
+              "policyId": "verification-1",
+              "policyVersion": "1",
+              "definitionHash": "f14cf084721b80ac8f1918e331880a73e128b487172dcb29c880ef36523929b7"
+            },
+            "validFrom": 0,
+            "validUntil": 1000
+          }
+        ],
+        "eligible": true
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "participationId": "w5",
+        "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+        "policy": {
+          "policyId": "eligibility-1",
+          "policyVersion": "1",
+          "definitionHash": "9c17a8bb9bfa4879853534710fbb641c0220538965a13a71cb7f5b8e6d77df83"
+        },
+        "evaluatedAt": 200,
+        "relevantAt": 150,
+        "claims": [
+          {
+            "eventId": "e2e-3-thin",
+            "claimId": "claim-org-w5",
+            "subjectParticipationId": "w5",
+            "claimType": "organization",
+            "value": {
+              "org": "org-shared"
+            },
+            "credential": {
+              "issuerId": "fixture-issuer",
+              "credentialRef": "credential-w5",
+              "proofRef": "proof-w5"
+            },
+            "provenance": "CREDENTIAL",
+            "verificationState": "VERIFIED",
+            "verificationPolicy": {
+              "policyId": "verification-1",
+              "policyVersion": "1",
+              "definitionHash": "f14cf084721b80ac8f1918e331880a73e128b487172dcb29c880ef36523929b7"
+            },
+            "validFrom": 0,
+            "validUntil": 1000
+          }
+        ],
+        "eligible": true
+      }
+    ],
+    "commitments": [
+      {
+        "eventId": "e2e-3-thin",
+        "witnessParticipationId": "w1",
+        "commitmentHash": "e6a6fcd85c3d218ad497b0ba4469099ab3198e04f3c33507c7e75c60c5f6e178",
+        "acceptedAt": 200,
+        "qualificationSnapshot": {
+          "eventId": "e2e-3-thin",
+          "participationId": "w1",
+          "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+          "policy": {
+            "policyId": "eligibility-1",
+            "policyVersion": "1",
+            "definitionHash": "9c17a8bb9bfa4879853534710fbb641c0220538965a13a71cb7f5b8e6d77df83"
+          },
+          "evaluatedAt": 200,
+          "relevantAt": 150,
+          "claims": [
+            {
+              "eventId": "e2e-3-thin",
+              "claimId": "claim-org-w1",
+              "subjectParticipationId": "w1",
+              "claimType": "organization",
+              "value": {
+                "org": "org-shared"
+              },
+              "credential": {
+                "issuerId": "fixture-issuer",
+                "credentialRef": "credential-w1",
+                "proofRef": "proof-w1"
+              },
+              "provenance": "CREDENTIAL",
+              "verificationState": "VERIFIED",
+              "verificationPolicy": {
+                "policyId": "verification-1",
+                "policyVersion": "1",
+                "definitionHash": "f14cf084721b80ac8f1918e331880a73e128b487172dcb29c880ef36523929b7"
+              },
+              "validFrom": 0,
+              "validUntil": 1000
+            }
+          ],
+          "eligible": true
+        }
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "witnessParticipationId": "w2",
+        "commitmentHash": "4438bc81e2498fe875d5411525b22531096daf759434ddb722c64bb286ecc3ff",
+        "acceptedAt": 200,
+        "qualificationSnapshot": {
+          "eventId": "e2e-3-thin",
+          "participationId": "w2",
+          "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+          "policy": {
+            "policyId": "eligibility-1",
+            "policyVersion": "1",
+            "definitionHash": "9c17a8bb9bfa4879853534710fbb641c0220538965a13a71cb7f5b8e6d77df83"
+          },
+          "evaluatedAt": 200,
+          "relevantAt": 150,
+          "claims": [
+            {
+              "eventId": "e2e-3-thin",
+              "claimId": "claim-org-w2",
+              "subjectParticipationId": "w2",
+              "claimType": "organization",
+              "value": {
+                "org": "org-shared"
+              },
+              "credential": {
+                "issuerId": "fixture-issuer",
+                "credentialRef": "credential-w2",
+                "proofRef": "proof-w2"
+              },
+              "provenance": "CREDENTIAL",
+              "verificationState": "VERIFIED",
+              "verificationPolicy": {
+                "policyId": "verification-1",
+                "policyVersion": "1",
+                "definitionHash": "f14cf084721b80ac8f1918e331880a73e128b487172dcb29c880ef36523929b7"
+              },
+              "validFrom": 0,
+              "validUntil": 1000
+            }
+          ],
+          "eligible": true
+        }
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "witnessParticipationId": "w3",
+        "commitmentHash": "f4c90f857e12379463de3b14f3df51d51cbbdf57513d8aab5acab68c246d8d55",
+        "acceptedAt": 200,
+        "qualificationSnapshot": {
+          "eventId": "e2e-3-thin",
+          "participationId": "w3",
+          "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+          "policy": {
+            "policyId": "eligibility-1",
+            "policyVersion": "1",
+            "definitionHash": "9c17a8bb9bfa4879853534710fbb641c0220538965a13a71cb7f5b8e6d77df83"
+          },
+          "evaluatedAt": 200,
+          "relevantAt": 150,
+          "claims": [
+            {
+              "eventId": "e2e-3-thin",
+              "claimId": "claim-org-w3",
+              "subjectParticipationId": "w3",
+              "claimType": "organization",
+              "value": {
+                "org": "org-shared"
+              },
+              "credential": {
+                "issuerId": "fixture-issuer",
+                "credentialRef": "credential-w3",
+                "proofRef": "proof-w3"
+              },
+              "provenance": "CREDENTIAL",
+              "verificationState": "VERIFIED",
+              "verificationPolicy": {
+                "policyId": "verification-1",
+                "policyVersion": "1",
+                "definitionHash": "f14cf084721b80ac8f1918e331880a73e128b487172dcb29c880ef36523929b7"
+              },
+              "validFrom": 0,
+              "validUntil": 1000
+            }
+          ],
+          "eligible": true
+        }
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "witnessParticipationId": "w4",
+        "commitmentHash": "c10ee4454ca985b2b7ccd1ee334e55cac06a3fbacf1c8009cad679a319a5f648",
+        "acceptedAt": 200,
+        "qualificationSnapshot": {
+          "eventId": "e2e-3-thin",
+          "participationId": "w4",
+          "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+          "policy": {
+            "policyId": "eligibility-1",
+            "policyVersion": "1",
+            "definitionHash": "9c17a8bb9bfa4879853534710fbb641c0220538965a13a71cb7f5b8e6d77df83"
+          },
+          "evaluatedAt": 200,
+          "relevantAt": 150,
+          "claims": [
+            {
+              "eventId": "e2e-3-thin",
+              "claimId": "claim-org-w4",
+              "subjectParticipationId": "w4",
+              "claimType": "organization",
+              "value": {
+                "org": "org-shared"
+              },
+              "credential": {
+                "issuerId": "fixture-issuer",
+                "credentialRef": "credential-w4",
+                "proofRef": "proof-w4"
+              },
+              "provenance": "CREDENTIAL",
+              "verificationState": "VERIFIED",
+              "verificationPolicy": {
+                "policyId": "verification-1",
+                "policyVersion": "1",
+                "definitionHash": "f14cf084721b80ac8f1918e331880a73e128b487172dcb29c880ef36523929b7"
+              },
+              "validFrom": 0,
+              "validUntil": 1000
+            }
+          ],
+          "eligible": true
+        }
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "witnessParticipationId": "w5",
+        "commitmentHash": "4aaf3134d7c0cc292d2c403ad5c55022dd105490fe07be06686b2c1e2ca7b826",
+        "acceptedAt": 200,
+        "qualificationSnapshot": {
+          "eventId": "e2e-3-thin",
+          "participationId": "w5",
+          "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+          "policy": {
+            "policyId": "eligibility-1",
+            "policyVersion": "1",
+            "definitionHash": "9c17a8bb9bfa4879853534710fbb641c0220538965a13a71cb7f5b8e6d77df83"
+          },
+          "evaluatedAt": 200,
+          "relevantAt": 150,
+          "claims": [
+            {
+              "eventId": "e2e-3-thin",
+              "claimId": "claim-org-w5",
+              "subjectParticipationId": "w5",
+              "claimType": "organization",
+              "value": {
+                "org": "org-shared"
+              },
+              "credential": {
+                "issuerId": "fixture-issuer",
+                "credentialRef": "credential-w5",
+                "proofRef": "proof-w5"
+              },
+              "provenance": "CREDENTIAL",
+              "verificationState": "VERIFIED",
+              "verificationPolicy": {
+                "policyId": "verification-1",
+                "policyVersion": "1",
+                "definitionHash": "f14cf084721b80ac8f1918e331880a73e128b487172dcb29c880ef36523929b7"
+              },
+              "validFrom": 0,
+              "validUntil": 1000
+            }
+          ],
+          "eligible": true
+        }
+      }
+    ],
+    "reveals": [
+      {
+        "eventId": "e2e-3-thin",
+        "witnessParticipationId": "w1",
+        "candidateObservation": {
+          "eventId": "e2e-3-thin",
+          "witnessParticipationId": "w1",
+          "observedAt": 150,
+          "report": {
+            "occurred": true
+          },
+          "evidenceManifestHash": null
+        },
+        "evidenceManifest": null,
+        "salt": "0000000000000000000000000000000000000000000000000000000000000000",
+        "receivedAt": 300,
+        "validation": "ADMITTED_OBSERVATION",
+        "validationReasons": []
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "witnessParticipationId": "w2",
+        "candidateObservation": {
+          "eventId": "e2e-3-thin",
+          "witnessParticipationId": "w2",
+          "observedAt": 150,
+          "report": {
+            "occurred": true
+          },
+          "evidenceManifestHash": null
+        },
+        "evidenceManifest": null,
+        "salt": "0000000000000000000000000000000000000000000000000000000000000000",
+        "receivedAt": 300,
+        "validation": "ADMITTED_OBSERVATION",
+        "validationReasons": []
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "witnessParticipationId": "w3",
+        "candidateObservation": {
+          "eventId": "e2e-3-thin",
+          "witnessParticipationId": "w3",
+          "observedAt": 150,
+          "report": {
+            "occurred": true
+          },
+          "evidenceManifestHash": null
+        },
+        "evidenceManifest": null,
+        "salt": "0000000000000000000000000000000000000000000000000000000000000000",
+        "receivedAt": 300,
+        "validation": "ADMITTED_OBSERVATION",
+        "validationReasons": []
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "witnessParticipationId": "w4",
+        "candidateObservation": {
+          "eventId": "e2e-3-thin",
+          "witnessParticipationId": "w4",
+          "observedAt": 150,
+          "report": {
+            "occurred": true
+          },
+          "evidenceManifestHash": null
+        },
+        "evidenceManifest": null,
+        "salt": "0000000000000000000000000000000000000000000000000000000000000000",
+        "receivedAt": 300,
+        "validation": "ADMITTED_OBSERVATION",
+        "validationReasons": []
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "witnessParticipationId": "w5",
+        "candidateObservation": {
+          "eventId": "e2e-3-thin",
+          "witnessParticipationId": "w5",
+          "observedAt": 150,
+          "report": {
+            "occurred": true
+          },
+          "evidenceManifestHash": null
+        },
+        "evidenceManifest": null,
+        "salt": "0000000000000000000000000000000000000000000000000000000000000000",
+        "receivedAt": 300,
+        "validation": "ADMITTED_OBSERVATION",
+        "validationReasons": []
+      }
+    ],
+    "intakeDecisions": [
+      {
+        "sequence": 1,
+        "actionType": "CREATE_EVENT",
+        "actorId": "event-authority",
+        "participationId": null,
+        "decision": "ACCEPTED",
+        "authoritativeAt": 0,
+        "clientTimestamp": null,
+        "recordRef": "e2e-3-thin",
+        "reasonCodes": [],
+        "input": {
+          "protocolVersion": "powit-v0",
+          "eventId": "e2e-3-thin",
+          "schemaId": "fixture-schema",
+          "schemaVersion": "1",
+          "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+          "windows": {
+            "enrollmentOpensAt": 10,
+            "enrollmentClosesAt": 100,
+            "observationOpensAt": 100,
+            "observationClosesAt": 300,
+            "commitOpensAt": 100,
+            "commitClosesAt": 300,
+            "revealOpensAt": 300,
+            "revealClosesAt": 400
+          },
+          "configuration": {}
+        }
+      },
+      {
+        "sequence": 2,
+        "actionType": "ACTIVATE_EVENT",
+        "actorId": "event-authority",
+        "participationId": null,
+        "decision": "ACCEPTED",
+        "authoritativeAt": 0,
+        "clientTimestamp": null,
+        "recordRef": "e2e-3-thin",
+        "reasonCodes": [],
+        "input": {
+          "eventId": "e2e-3-thin"
+        }
+      },
+      {
+        "sequence": 3,
+        "actionType": "ASSERT_EVENT_SCOPED_UNIQUENESS",
+        "actorId": "actor-1",
+        "participationId": "w1",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 50,
+        "clientTimestamp": null,
+        "recordRef": "85870676ee6967388c1f6caf38f8cb1db5a74abc123c3585fda5a26d97989928",
+        "reasonCodes": [],
+        "input": {
+          "eventId": "e2e-3-thin",
+          "uniquenessToken": "token-1",
+          "assuranceProvider": "fixture-provider",
+          "assuranceMethod": {
+            "policyId": "assurance-method-1",
+            "policyVersion": "1",
+            "definitionHash": "6c3939f9581d59ea5cc3a6a6fe6555a6f81f3db0d56fe0c4c8a10687bb3c9317"
+          },
+          "assertedAt": 50,
+          "validUntil": 500
+        }
+      },
+      {
+        "sequence": 4,
+        "actionType": "ENROLL",
+        "actorId": "actor-1",
+        "participationId": "w1",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 50,
+        "clientTimestamp": null,
+        "recordRef": "w1",
+        "reasonCodes": [],
+        "input": {
+          "eventId": "e2e-3-thin",
+          "participationId": "w1",
+          "witnessClasses": [
+            "observer"
+          ],
+          "enrolledAt": 50,
+          "uniquenessAssertionHash": "85870676ee6967388c1f6caf38f8cb1db5a74abc123c3585fda5a26d97989928"
+        }
+      },
+      {
+        "sequence": 5,
+        "actionType": "ACCEPT_COMMITMENT",
+        "actorId": "actor-1",
+        "participationId": "w1",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 200,
+        "clientTimestamp": 999999,
+        "recordRef": "e6a6fcd85c3d218ad497b0ba4469099ab3198e04f3c33507c7e75c60c5f6e178",
+        "reasonCodes": [],
+        "input": {
+          "commitment": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w1",
+            "commitmentHash": "e6a6fcd85c3d218ad497b0ba4469099ab3198e04f3c33507c7e75c60c5f6e178",
+            "acceptedAt": 200,
+            "qualificationSnapshot": {
+              "eventId": "e2e-3-thin",
+              "participationId": "w1",
+              "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+              "policy": {
+                "policyId": "eligibility-1",
+                "policyVersion": "1",
+                "definitionHash": "9c17a8bb9bfa4879853534710fbb641c0220538965a13a71cb7f5b8e6d77df83"
+              },
+              "evaluatedAt": 200,
+              "relevantAt": 150,
+              "claims": [
+                {
+                  "eventId": "e2e-3-thin",
+                  "claimId": "claim-org-w1",
+                  "subjectParticipationId": "w1",
+                  "claimType": "organization",
+                  "value": {
+                    "org": "org-shared"
+                  },
+                  "credential": {
+                    "issuerId": "fixture-issuer",
+                    "credentialRef": "credential-w1",
+                    "proofRef": "proof-w1"
+                  },
+                  "provenance": "CREDENTIAL",
+                  "verificationState": "VERIFIED",
+                  "verificationPolicy": {
+                    "policyId": "verification-1",
+                    "policyVersion": "1",
+                    "definitionHash": "f14cf084721b80ac8f1918e331880a73e128b487172dcb29c880ef36523929b7"
+                  },
+                  "validFrom": 0,
+                  "validUntil": 1000
+                }
+              ],
+              "eligible": true
+            }
+          },
+          "observation": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w1",
+            "observedAt": 150,
+            "report": {
+              "occurred": true
+            },
+            "evidenceManifestHash": null
+          },
+          "preimage": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w1",
+            "observationHash": "cec4b181aa7f90e6a2b365360ea1a913acf2caced281ffe5cf48e8d5609106d4",
+            "evidenceManifestHash": null,
+            "salt": "0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      },
+      {
+        "sequence": 6,
+        "actionType": "ACCEPT_REVEAL",
+        "actorId": "actor-1",
+        "participationId": "w1",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 300,
+        "clientTimestamp": null,
+        "recordRef": "reveal-w1",
+        "reasonCodes": [],
+        "input": {
+          "eventId": "e2e-3-thin",
+          "witnessParticipationId": "w1",
+          "candidateObservation": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w1",
+            "observedAt": 150,
+            "report": {
+              "occurred": true
+            },
+            "evidenceManifestHash": null
+          },
+          "evidenceManifest": null,
+          "salt": "0000000000000000000000000000000000000000000000000000000000000000",
+          "receivedAt": 300,
+          "validation": "ADMITTED_OBSERVATION",
+          "validationReasons": []
+        }
+      },
+      {
+        "sequence": 7,
+        "actionType": "ASSERT_EVENT_SCOPED_UNIQUENESS",
+        "actorId": "actor-2",
+        "participationId": "w2",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 50,
+        "clientTimestamp": null,
+        "recordRef": "39a070f27999e88a6e1e8248a238fc3804d0b481b53b0aaef75532d80dc22091",
+        "reasonCodes": [],
+        "input": {
+          "eventId": "e2e-3-thin",
+          "uniquenessToken": "token-2",
+          "assuranceProvider": "fixture-provider",
+          "assuranceMethod": {
+            "policyId": "assurance-method-1",
+            "policyVersion": "1",
+            "definitionHash": "6c3939f9581d59ea5cc3a6a6fe6555a6f81f3db0d56fe0c4c8a10687bb3c9317"
+          },
+          "assertedAt": 50,
+          "validUntil": 500
+        }
+      },
+      {
+        "sequence": 8,
+        "actionType": "ENROLL",
+        "actorId": "actor-2",
+        "participationId": "w2",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 50,
+        "clientTimestamp": null,
+        "recordRef": "w2",
+        "reasonCodes": [],
+        "input": {
+          "eventId": "e2e-3-thin",
+          "participationId": "w2",
+          "witnessClasses": [
+            "observer"
+          ],
+          "enrolledAt": 50,
+          "uniquenessAssertionHash": "39a070f27999e88a6e1e8248a238fc3804d0b481b53b0aaef75532d80dc22091"
+        }
+      },
+      {
+        "sequence": 9,
+        "actionType": "ACCEPT_COMMITMENT",
+        "actorId": "actor-2",
+        "participationId": "w2",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 200,
+        "clientTimestamp": 999999,
+        "recordRef": "4438bc81e2498fe875d5411525b22531096daf759434ddb722c64bb286ecc3ff",
+        "reasonCodes": [],
+        "input": {
+          "commitment": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w2",
+            "commitmentHash": "4438bc81e2498fe875d5411525b22531096daf759434ddb722c64bb286ecc3ff",
+            "acceptedAt": 200,
+            "qualificationSnapshot": {
+              "eventId": "e2e-3-thin",
+              "participationId": "w2",
+              "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+              "policy": {
+                "policyId": "eligibility-1",
+                "policyVersion": "1",
+                "definitionHash": "9c17a8bb9bfa4879853534710fbb641c0220538965a13a71cb7f5b8e6d77df83"
+              },
+              "evaluatedAt": 200,
+              "relevantAt": 150,
+              "claims": [
+                {
+                  "eventId": "e2e-3-thin",
+                  "claimId": "claim-org-w2",
+                  "subjectParticipationId": "w2",
+                  "claimType": "organization",
+                  "value": {
+                    "org": "org-shared"
+                  },
+                  "credential": {
+                    "issuerId": "fixture-issuer",
+                    "credentialRef": "credential-w2",
+                    "proofRef": "proof-w2"
+                  },
+                  "provenance": "CREDENTIAL",
+                  "verificationState": "VERIFIED",
+                  "verificationPolicy": {
+                    "policyId": "verification-1",
+                    "policyVersion": "1",
+                    "definitionHash": "f14cf084721b80ac8f1918e331880a73e128b487172dcb29c880ef36523929b7"
+                  },
+                  "validFrom": 0,
+                  "validUntil": 1000
+                }
+              ],
+              "eligible": true
+            }
+          },
+          "observation": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w2",
+            "observedAt": 150,
+            "report": {
+              "occurred": true
+            },
+            "evidenceManifestHash": null
+          },
+          "preimage": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w2",
+            "observationHash": "bd0ee32df4ecff1b8cf54ee205b955e48c25f442320f889fb090f12caf86fc60",
+            "evidenceManifestHash": null,
+            "salt": "0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      },
+      {
+        "sequence": 10,
+        "actionType": "ACCEPT_REVEAL",
+        "actorId": "actor-2",
+        "participationId": "w2",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 300,
+        "clientTimestamp": null,
+        "recordRef": "reveal-w2",
+        "reasonCodes": [],
+        "input": {
+          "eventId": "e2e-3-thin",
+          "witnessParticipationId": "w2",
+          "candidateObservation": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w2",
+            "observedAt": 150,
+            "report": {
+              "occurred": true
+            },
+            "evidenceManifestHash": null
+          },
+          "evidenceManifest": null,
+          "salt": "0000000000000000000000000000000000000000000000000000000000000000",
+          "receivedAt": 300,
+          "validation": "ADMITTED_OBSERVATION",
+          "validationReasons": []
+        }
+      },
+      {
+        "sequence": 11,
+        "actionType": "ASSERT_EVENT_SCOPED_UNIQUENESS",
+        "actorId": "actor-3",
+        "participationId": "w3",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 50,
+        "clientTimestamp": null,
+        "recordRef": "f94aea3059114f0dc220bc9fd5f7784f2d692fb000365ca7feff8602f4550a23",
+        "reasonCodes": [],
+        "input": {
+          "eventId": "e2e-3-thin",
+          "uniquenessToken": "token-3",
+          "assuranceProvider": "fixture-provider",
+          "assuranceMethod": {
+            "policyId": "assurance-method-1",
+            "policyVersion": "1",
+            "definitionHash": "6c3939f9581d59ea5cc3a6a6fe6555a6f81f3db0d56fe0c4c8a10687bb3c9317"
+          },
+          "assertedAt": 50,
+          "validUntil": 500
+        }
+      },
+      {
+        "sequence": 12,
+        "actionType": "ENROLL",
+        "actorId": "actor-3",
+        "participationId": "w3",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 50,
+        "clientTimestamp": null,
+        "recordRef": "w3",
+        "reasonCodes": [],
+        "input": {
+          "eventId": "e2e-3-thin",
+          "participationId": "w3",
+          "witnessClasses": [
+            "observer"
+          ],
+          "enrolledAt": 50,
+          "uniquenessAssertionHash": "f94aea3059114f0dc220bc9fd5f7784f2d692fb000365ca7feff8602f4550a23"
+        }
+      },
+      {
+        "sequence": 13,
+        "actionType": "ACCEPT_COMMITMENT",
+        "actorId": "actor-3",
+        "participationId": "w3",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 200,
+        "clientTimestamp": 999999,
+        "recordRef": "f4c90f857e12379463de3b14f3df51d51cbbdf57513d8aab5acab68c246d8d55",
+        "reasonCodes": [],
+        "input": {
+          "commitment": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w3",
+            "commitmentHash": "f4c90f857e12379463de3b14f3df51d51cbbdf57513d8aab5acab68c246d8d55",
+            "acceptedAt": 200,
+            "qualificationSnapshot": {
+              "eventId": "e2e-3-thin",
+              "participationId": "w3",
+              "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+              "policy": {
+                "policyId": "eligibility-1",
+                "policyVersion": "1",
+                "definitionHash": "9c17a8bb9bfa4879853534710fbb641c0220538965a13a71cb7f5b8e6d77df83"
+              },
+              "evaluatedAt": 200,
+              "relevantAt": 150,
+              "claims": [
+                {
+                  "eventId": "e2e-3-thin",
+                  "claimId": "claim-org-w3",
+                  "subjectParticipationId": "w3",
+                  "claimType": "organization",
+                  "value": {
+                    "org": "org-shared"
+                  },
+                  "credential": {
+                    "issuerId": "fixture-issuer",
+                    "credentialRef": "credential-w3",
+                    "proofRef": "proof-w3"
+                  },
+                  "provenance": "CREDENTIAL",
+                  "verificationState": "VERIFIED",
+                  "verificationPolicy": {
+                    "policyId": "verification-1",
+                    "policyVersion": "1",
+                    "definitionHash": "f14cf084721b80ac8f1918e331880a73e128b487172dcb29c880ef36523929b7"
+                  },
+                  "validFrom": 0,
+                  "validUntil": 1000
+                }
+              ],
+              "eligible": true
+            }
+          },
+          "observation": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w3",
+            "observedAt": 150,
+            "report": {
+              "occurred": true
+            },
+            "evidenceManifestHash": null
+          },
+          "preimage": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w3",
+            "observationHash": "a4c199f5f9f0651adac5f22a4c770534b3a56472f0934f35cc36382b5c2d2023",
+            "evidenceManifestHash": null,
+            "salt": "0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      },
+      {
+        "sequence": 14,
+        "actionType": "ACCEPT_REVEAL",
+        "actorId": "actor-3",
+        "participationId": "w3",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 300,
+        "clientTimestamp": null,
+        "recordRef": "reveal-w3",
+        "reasonCodes": [],
+        "input": {
+          "eventId": "e2e-3-thin",
+          "witnessParticipationId": "w3",
+          "candidateObservation": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w3",
+            "observedAt": 150,
+            "report": {
+              "occurred": true
+            },
+            "evidenceManifestHash": null
+          },
+          "evidenceManifest": null,
+          "salt": "0000000000000000000000000000000000000000000000000000000000000000",
+          "receivedAt": 300,
+          "validation": "ADMITTED_OBSERVATION",
+          "validationReasons": []
+        }
+      },
+      {
+        "sequence": 15,
+        "actionType": "ASSERT_EVENT_SCOPED_UNIQUENESS",
+        "actorId": "actor-4",
+        "participationId": "w4",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 50,
+        "clientTimestamp": null,
+        "recordRef": "22a6d93420861f53607335fd12c8b79e03e62e7115f94c8e92e915772dc67861",
+        "reasonCodes": [],
+        "input": {
+          "eventId": "e2e-3-thin",
+          "uniquenessToken": "token-4",
+          "assuranceProvider": "fixture-provider",
+          "assuranceMethod": {
+            "policyId": "assurance-method-1",
+            "policyVersion": "1",
+            "definitionHash": "6c3939f9581d59ea5cc3a6a6fe6555a6f81f3db0d56fe0c4c8a10687bb3c9317"
+          },
+          "assertedAt": 50,
+          "validUntil": 500
+        }
+      },
+      {
+        "sequence": 16,
+        "actionType": "ENROLL",
+        "actorId": "actor-4",
+        "participationId": "w4",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 50,
+        "clientTimestamp": null,
+        "recordRef": "w4",
+        "reasonCodes": [],
+        "input": {
+          "eventId": "e2e-3-thin",
+          "participationId": "w4",
+          "witnessClasses": [
+            "observer"
+          ],
+          "enrolledAt": 50,
+          "uniquenessAssertionHash": "22a6d93420861f53607335fd12c8b79e03e62e7115f94c8e92e915772dc67861"
+        }
+      },
+      {
+        "sequence": 17,
+        "actionType": "ACCEPT_COMMITMENT",
+        "actorId": "actor-4",
+        "participationId": "w4",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 200,
+        "clientTimestamp": 999999,
+        "recordRef": "c10ee4454ca985b2b7ccd1ee334e55cac06a3fbacf1c8009cad679a319a5f648",
+        "reasonCodes": [],
+        "input": {
+          "commitment": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w4",
+            "commitmentHash": "c10ee4454ca985b2b7ccd1ee334e55cac06a3fbacf1c8009cad679a319a5f648",
+            "acceptedAt": 200,
+            "qualificationSnapshot": {
+              "eventId": "e2e-3-thin",
+              "participationId": "w4",
+              "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+              "policy": {
+                "policyId": "eligibility-1",
+                "policyVersion": "1",
+                "definitionHash": "9c17a8bb9bfa4879853534710fbb641c0220538965a13a71cb7f5b8e6d77df83"
+              },
+              "evaluatedAt": 200,
+              "relevantAt": 150,
+              "claims": [
+                {
+                  "eventId": "e2e-3-thin",
+                  "claimId": "claim-org-w4",
+                  "subjectParticipationId": "w4",
+                  "claimType": "organization",
+                  "value": {
+                    "org": "org-shared"
+                  },
+                  "credential": {
+                    "issuerId": "fixture-issuer",
+                    "credentialRef": "credential-w4",
+                    "proofRef": "proof-w4"
+                  },
+                  "provenance": "CREDENTIAL",
+                  "verificationState": "VERIFIED",
+                  "verificationPolicy": {
+                    "policyId": "verification-1",
+                    "policyVersion": "1",
+                    "definitionHash": "f14cf084721b80ac8f1918e331880a73e128b487172dcb29c880ef36523929b7"
+                  },
+                  "validFrom": 0,
+                  "validUntil": 1000
+                }
+              ],
+              "eligible": true
+            }
+          },
+          "observation": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w4",
+            "observedAt": 150,
+            "report": {
+              "occurred": true
+            },
+            "evidenceManifestHash": null
+          },
+          "preimage": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w4",
+            "observationHash": "c98ba488a431fbc97548a75a1e86d65769dadd81ae94cad36597842ddf674d80",
+            "evidenceManifestHash": null,
+            "salt": "0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      },
+      {
+        "sequence": 18,
+        "actionType": "ACCEPT_REVEAL",
+        "actorId": "actor-4",
+        "participationId": "w4",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 300,
+        "clientTimestamp": null,
+        "recordRef": "reveal-w4",
+        "reasonCodes": [],
+        "input": {
+          "eventId": "e2e-3-thin",
+          "witnessParticipationId": "w4",
+          "candidateObservation": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w4",
+            "observedAt": 150,
+            "report": {
+              "occurred": true
+            },
+            "evidenceManifestHash": null
+          },
+          "evidenceManifest": null,
+          "salt": "0000000000000000000000000000000000000000000000000000000000000000",
+          "receivedAt": 300,
+          "validation": "ADMITTED_OBSERVATION",
+          "validationReasons": []
+        }
+      },
+      {
+        "sequence": 19,
+        "actionType": "ASSERT_EVENT_SCOPED_UNIQUENESS",
+        "actorId": "actor-5",
+        "participationId": "w5",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 50,
+        "clientTimestamp": null,
+        "recordRef": "de7b7683b3bb07086d94c81751f2b5103343e6fe4792fca08984eea14b10d722",
+        "reasonCodes": [],
+        "input": {
+          "eventId": "e2e-3-thin",
+          "uniquenessToken": "token-5",
+          "assuranceProvider": "fixture-provider",
+          "assuranceMethod": {
+            "policyId": "assurance-method-1",
+            "policyVersion": "1",
+            "definitionHash": "6c3939f9581d59ea5cc3a6a6fe6555a6f81f3db0d56fe0c4c8a10687bb3c9317"
+          },
+          "assertedAt": 50,
+          "validUntil": 500
+        }
+      },
+      {
+        "sequence": 20,
+        "actionType": "ENROLL",
+        "actorId": "actor-5",
+        "participationId": "w5",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 50,
+        "clientTimestamp": null,
+        "recordRef": "w5",
+        "reasonCodes": [],
+        "input": {
+          "eventId": "e2e-3-thin",
+          "participationId": "w5",
+          "witnessClasses": [
+            "observer"
+          ],
+          "enrolledAt": 50,
+          "uniquenessAssertionHash": "de7b7683b3bb07086d94c81751f2b5103343e6fe4792fca08984eea14b10d722"
+        }
+      },
+      {
+        "sequence": 21,
+        "actionType": "ACCEPT_COMMITMENT",
+        "actorId": "actor-5",
+        "participationId": "w5",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 200,
+        "clientTimestamp": 999999,
+        "recordRef": "4aaf3134d7c0cc292d2c403ad5c55022dd105490fe07be06686b2c1e2ca7b826",
+        "reasonCodes": [],
+        "input": {
+          "commitment": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w5",
+            "commitmentHash": "4aaf3134d7c0cc292d2c403ad5c55022dd105490fe07be06686b2c1e2ca7b826",
+            "acceptedAt": 200,
+            "qualificationSnapshot": {
+              "eventId": "e2e-3-thin",
+              "participationId": "w5",
+              "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+              "policy": {
+                "policyId": "eligibility-1",
+                "policyVersion": "1",
+                "definitionHash": "9c17a8bb9bfa4879853534710fbb641c0220538965a13a71cb7f5b8e6d77df83"
+              },
+              "evaluatedAt": 200,
+              "relevantAt": 150,
+              "claims": [
+                {
+                  "eventId": "e2e-3-thin",
+                  "claimId": "claim-org-w5",
+                  "subjectParticipationId": "w5",
+                  "claimType": "organization",
+                  "value": {
+                    "org": "org-shared"
+                  },
+                  "credential": {
+                    "issuerId": "fixture-issuer",
+                    "credentialRef": "credential-w5",
+                    "proofRef": "proof-w5"
+                  },
+                  "provenance": "CREDENTIAL",
+                  "verificationState": "VERIFIED",
+                  "verificationPolicy": {
+                    "policyId": "verification-1",
+                    "policyVersion": "1",
+                    "definitionHash": "f14cf084721b80ac8f1918e331880a73e128b487172dcb29c880ef36523929b7"
+                  },
+                  "validFrom": 0,
+                  "validUntil": 1000
+                }
+              ],
+              "eligible": true
+            }
+          },
+          "observation": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w5",
+            "observedAt": 150,
+            "report": {
+              "occurred": true
+            },
+            "evidenceManifestHash": null
+          },
+          "preimage": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w5",
+            "observationHash": "9e68aa617dd551beb2d452a762cbc4965d5441eb79b4b794aaa6892364a89d28",
+            "evidenceManifestHash": null,
+            "salt": "0000000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      },
+      {
+        "sequence": 22,
+        "actionType": "ACCEPT_REVEAL",
+        "actorId": "actor-5",
+        "participationId": "w5",
+        "decision": "ACCEPTED",
+        "authoritativeAt": 300,
+        "clientTimestamp": null,
+        "recordRef": "reveal-w5",
+        "reasonCodes": [],
+        "input": {
+          "eventId": "e2e-3-thin",
+          "witnessParticipationId": "w5",
+          "candidateObservation": {
+            "eventId": "e2e-3-thin",
+            "witnessParticipationId": "w5",
+            "observedAt": 150,
+            "report": {
+              "occurred": true
+            },
+            "evidenceManifestHash": null
+          },
+          "evidenceManifest": null,
+          "salt": "0000000000000000000000000000000000000000000000000000000000000000",
+          "receivedAt": 300,
+          "validation": "ADMITTED_OBSERVATION",
+          "validationReasons": []
+        }
+      },
+      {
+        "sequence": 23,
+        "actionType": "BEGIN_FINALIZATION",
+        "actorId": "protocol-runtime",
+        "participationId": null,
+        "decision": "ACCEPTED",
+        "authoritativeAt": 400,
+        "clientTimestamp": null,
+        "recordRef": "e2e-3-thin",
+        "reasonCodes": [],
+        "input": {
+          "eventId": "e2e-3-thin"
+        }
+      }
+    ],
+    "disqualifications": [],
+    "claimedObservationOutcomes": [
+      {
+        "participationId": "w1",
+        "sequence": 6,
+        "outcome": "ADMITTED_OBSERVATION",
+        "reasonCodes": []
+      },
+      {
+        "participationId": "w2",
+        "sequence": 10,
+        "outcome": "ADMITTED_OBSERVATION",
+        "reasonCodes": []
+      },
+      {
+        "participationId": "w3",
+        "sequence": 14,
+        "outcome": "ADMITTED_OBSERVATION",
+        "reasonCodes": []
+      },
+      {
+        "participationId": "w4",
+        "sequence": 18,
+        "outcome": "ADMITTED_OBSERVATION",
+        "reasonCodes": []
+      },
+      {
+        "participationId": "w5",
+        "sequence": 22,
+        "outcome": "ADMITTED_OBSERVATION",
+        "reasonCodes": []
+      }
+    ],
+    "claimedAdmittedObservations": [
+      {
+        "eventId": "e2e-3-thin",
+        "witnessParticipationId": "w1",
+        "observedAt": 150,
+        "report": {
+          "occurred": true
+        },
+        "evidenceManifestHash": null
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "witnessParticipationId": "w2",
+        "observedAt": 150,
+        "report": {
+          "occurred": true
+        },
+        "evidenceManifestHash": null
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "witnessParticipationId": "w3",
+        "observedAt": 150,
+        "report": {
+          "occurred": true
+        },
+        "evidenceManifestHash": null
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "witnessParticipationId": "w4",
+        "observedAt": 150,
+        "report": {
+          "occurred": true
+        },
+        "evidenceManifestHash": null
+      },
+      {
+        "eventId": "e2e-3-thin",
+        "witnessParticipationId": "w5",
+        "observedAt": 150,
+        "report": {
+          "occurred": true
+        },
+        "evidenceManifestHash": null
+      }
+    ],
+    "claimedRelationGraph": {
+      "eventId": "e2e-3-thin",
+      "policy": {
+        "policyId": "relations-1",
+        "policyVersion": "1",
+        "definitionHash": "2daac105dce8b68896e4af1169e66ee7a1ee3b60497a9ded9a5c1371d4937360"
+      },
+      "participantIds": [
+        "w1",
+        "w2",
+        "w3",
+        "w4",
+        "w5"
+      ],
+      "dimensions": [
+        "organization"
+      ],
+      "relations": [
+        {
+          "leftParticipationId": "w1",
+          "rightParticipationId": "w2",
+          "dimension": "organization",
+          "status": "KNOWN_RELATED",
+          "claimIds": [
+            "claim-org-w1",
+            "claim-org-w2"
+          ]
+        },
+        {
+          "leftParticipationId": "w1",
+          "rightParticipationId": "w3",
+          "dimension": "organization",
+          "status": "KNOWN_RELATED",
+          "claimIds": [
+            "claim-org-w1",
+            "claim-org-w3"
+          ]
+        },
+        {
+          "leftParticipationId": "w1",
+          "rightParticipationId": "w4",
+          "dimension": "organization",
+          "status": "KNOWN_RELATED",
+          "claimIds": [
+            "claim-org-w1",
+            "claim-org-w4"
+          ]
+        },
+        {
+          "leftParticipationId": "w1",
+          "rightParticipationId": "w5",
+          "dimension": "organization",
+          "status": "KNOWN_RELATED",
+          "claimIds": [
+            "claim-org-w1",
+            "claim-org-w5"
+          ]
+        },
+        {
+          "leftParticipationId": "w2",
+          "rightParticipationId": "w3",
+          "dimension": "organization",
+          "status": "KNOWN_RELATED",
+          "claimIds": [
+            "claim-org-w2",
+            "claim-org-w3"
+          ]
+        },
+        {
+          "leftParticipationId": "w2",
+          "rightParticipationId": "w4",
+          "dimension": "organization",
+          "status": "KNOWN_RELATED",
+          "claimIds": [
+            "claim-org-w2",
+            "claim-org-w4"
+          ]
+        },
+        {
+          "leftParticipationId": "w2",
+          "rightParticipationId": "w5",
+          "dimension": "organization",
+          "status": "KNOWN_RELATED",
+          "claimIds": [
+            "claim-org-w2",
+            "claim-org-w5"
+          ]
+        },
+        {
+          "leftParticipationId": "w3",
+          "rightParticipationId": "w4",
+          "dimension": "organization",
+          "status": "KNOWN_RELATED",
+          "claimIds": [
+            "claim-org-w3",
+            "claim-org-w4"
+          ]
+        },
+        {
+          "leftParticipationId": "w3",
+          "rightParticipationId": "w5",
+          "dimension": "organization",
+          "status": "KNOWN_RELATED",
+          "claimIds": [
+            "claim-org-w3",
+            "claim-org-w5"
+          ]
+        },
+        {
+          "leftParticipationId": "w4",
+          "rightParticipationId": "w5",
+          "dimension": "organization",
+          "status": "KNOWN_RELATED",
+          "claimIds": [
+            "claim-org-w4",
+            "claim-org-w5"
+          ]
+        }
+      ],
+      "conflicts": []
+    },
+    "claimedSufficiencyEvaluation": {
+      "eventId": "e2e-3-thin",
+      "policy": {
+        "policyId": "sufficiency-1",
+        "policyVersion": "1",
+        "definitionHash": "edb6d241076b2bc81e2d7bd5718f79f57ef81d88228ea7b378506644cdc5d584"
+      },
+      "requirements": [
+        {
+          "requirementId": "minimum-observations",
+          "operator": "MIN_ACCEPTED_OBSERVATIONS",
+          "parameters": {
+            "minimum": 3
+          },
+          "observedValue": 5,
+          "passed": true,
+          "claimIds": [],
+          "relationKeys": []
+        },
+        {
+          "requirementId": "distinct-organizations",
+          "operator": "MIN_DISTINCT_VERIFIED_VALUES",
+          "parameters": {
+            "dimension": "organization",
+            "minimum": 3
+          },
+          "observedValue": 1,
+          "passed": false,
+          "claimIds": [
+            "claim-org-w1",
+            "claim-org-w2",
+            "claim-org-w3",
+            "claim-org-w4",
+            "claim-org-w5"
+          ],
+          "relationKeys": []
+        }
+      ],
+      "overallSufficient": false
+    },
+    "claimedAggregationResult": {
+      "eventId": "e2e-3-thin",
+      "policy": {
+        "policyId": "aggregation-1",
+        "policyVersion": "1",
+        "definitionHash": "4a9fe3d36cc3d62f095fec226f247f71ee895b32d5575eab22c75398e8e50d10"
+      },
+      "reducer": "EXACT_MATCH",
+      "materialClaimPath": [
+        "occurred"
+      ],
+      "assessment": "CONVERGENT",
+      "values": [
+        {
+          "canonicalValue": true,
+          "observationCount": 5,
+          "participationIds": [
+            "w1",
+            "w2",
+            "w3",
+            "w4",
+            "w5"
+          ]
+        }
+      ]
+    },
+    "claimedEpistemicState": "THIN"
+  },
+  "witnesses": [
+    {
+      "alias": "w1",
+      "participationId": "w1"
+    },
+    {
+      "alias": "w2",
+      "participationId": "w2"
+    },
+    {
+      "alias": "w3",
+      "participationId": "w3"
+    },
+    {
+      "alias": "w4",
+      "participationId": "w4"
+    },
+    {
+      "alias": "w5",
+      "participationId": "w5"
+    }
+  ],
+  "verification": {
+    "valid": true,
+    "reasonCodes": [],
+    "attestation": {
+      "protocolVersion": "powit-v0",
+      "eventId": "e2e-3-thin",
+      "eventHash": "bc119d37bf038fc8f1ea859fc2db72f27e6cdc3c78f663138c7c65139611b5b7",
+      "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+      "acceptedParticipationSetHash": "64c216ba6517aa6bad818fc4dedffd0967365759f8646d308c253dcbe1161c0f",
+      "acceptedObservationSetHash": "500f190758bec8ef2a774edfa42c9bfaa228fc4f8527dca92a2459331a0a9c8a",
+      "relationGraphHash": "6f86f7547741d9a292e4f39ac3cf6969eb431a822e101db09574366f595c3440",
+      "sufficiencyEvaluationHash": "b26cad631afa364850e87ee6e922f6976050495b7643a316090067f661d6858c",
+      "aggregationResultHash": "895e282b79d09434e1950e2e960cac44e4a14eab74c90b2558d9b46ddabe3273",
+      "replayInputHash": "b1071e4dc392798e61ae1fe96ada0c568ec47d51cb48e16f049bc46a1b1afb62",
+      "epistemicState": "THIN",
+      "version": 1,
+      "supersedes": null,
+      "finalizingAt": 400
+    },
+    "attestationHash": "758652a08d992811631734eb45208569cfc2f8ea24c2b40d84af40f5f5e1d718"
+  },
+  "settlement": {
+    "status": "UNSUBMITTED",
+    "record": {
+      "settlementProfileVersion": "thoth.settlement.v0",
+      "protocolVersion": "powit-v0",
+      "eventId": "e2e-3-thin",
+      "schemaHash": "0c326be5ddd1941128f34bc011530f03a04109b19ac87c90622c9b045fe0bc18",
+      "attestationVersion": 1,
+      "attestationHash": "758652a08d992811631734eb45208569cfc2f8ea24c2b40d84af40f5f5e1d718",
+      "replayBundleHash": "b1071e4dc392798e61ae1fe96ada0c568ec47d51cb48e16f049bc46a1b1afb62",
+      "verificationAvailabilityProfile": "RESTRICTED_REPLAY"
+    },
+    "accountAddress": null,
+    "signature": null
+  }
+}

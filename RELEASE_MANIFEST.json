@@ -1,0 +1,372 @@
+{
+  "candidate": "powit-research-2026-11-26",
+  "status": "Rights confirmed; ready for dedicated repository staging; public visibility requires approval",
+  "generatedAt": "2026-11-26T08:13:05.605Z",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 24,
+      "sha256": "6c7d15d2ab1a0b51ebcae7e88b9ad01f0713d0833bc2dbe8f3bcc7a81b66b344"
+    },
+    {
+      "path": "docs/decisions/ADR-001-powit-thoth-separation.md",
+      "bytes": 1892,
+      "sha256": "2118c4c185608175bea78ee4eee0b88a687de2609f5d4508c8affabe2b50c51e"
+    },
+    {
+      "path": "docs/decisions/ADR-002-selective-linkability.md",
+      "bytes": 1973,
+      "sha256": "49510267ce2bd1487a2e40b3046e568bbf19cce1060de2e6701d0ec02421d3eb"
+    },
+    {
+      "path": "docs/decisions/ADR-003-solana-as-preferred-settlement.md",
+      "bytes": 1986,
+      "sha256": "320f7a732fdad5a2b631d33727a841cc7821e7760652047106e007088734271b"
+    },
+    {
+      "path": "docs/decisions/ADR-004-disagreement-preservation.md",
+      "bytes": 2158,
+      "sha256": "30d1987ef1995a9c952ad78c24498c82c3e3bb16bf4738b31c6a98225ac5a0eb"
+    },
+    {
+      "path": "docs/decisions/ADR-005-independence-vs-reputation.md",
+      "bytes": 1905,
+      "sha256": "8f115ae0ec4534fe1903266171e5e6dd75fd315f6108a0bd83942828d2fd4ada"
+    },
+    {
+      "path": "docs/decisions/ADR-006-powit-v0-semantic-freeze.md",
+      "bytes": 4617,
+      "sha256": "a9acb5fbf69f7f0ea8299a524d3d4b59ae09ecff5767df31002d49107bf20695"
+    },
+    {
+      "path": "docs/decisions/ADR-007-powit-v0-executable-policy-profile.md",
+      "bytes": 4735,
+      "sha256": "db609dfc40f8bb065ec5a32257d0248de1a044224f75e8fc93f89ec5c4b6fb41"
+    },
+    {
+      "path": "docs/decisions/ADR-008-thoth-v0-settlement-profile.md",
+      "bytes": 3878,
+      "sha256": "b181b12df598545d66022d7216b727c5e3c55c74ada1278f662945dbfa07c925"
+    },
+    {
+      "path": "evidence/2026-11-26/core.log",
+      "bytes": 5939,
+      "sha256": "e95c72d94656a39cdbc82aae01f3aa1d109a9865cb86e922c3505e52cc137210"
+    },
+    {
+      "path": "evidence/2026-11-26/records.log",
+      "bytes": 811,
+      "sha256": "30e79fec26f734a3ea4d2ee4ba9b48597f7d72f6873554d5bbf21d9194c5cd20"
+    },
+    {
+      "path": "evidence/boundaries.log",
+      "bytes": 122,
+      "sha256": "883b2459370be9514a0a0f2b2dc3ce0ef58260921d0880782c970b031c3e5006"
+    },
+    {
+      "path": "evidence/core.log",
+      "bytes": 5917,
+      "sha256": "66863356f8c17b6bf2c59b6476597b688c89f3800d51491660567fa4b820f4a1"
+    },
+    {
+      "path": "evidence/rebuilt-e2e.log",
+      "bytes": 15111,
+      "sha256": "eebddc56b2cdafccb4c307dce117a932cb7b03046602ad1a4f977fbfd2010077"
+    },
+    {
+      "path": "evidence/RESULTS.json",
+      "bytes": 3686,
+      "sha256": "61aa8cceb50dae2e3aafa640ba287523445a793ed349338c587772f1da08d9c8"
+    },
+    {
+      "path": "evidence/runtime.log",
+      "bytes": 4315,
+      "sha256": "4a4d369ef189b44e381d90e8a6c0b9f9ff548c643b8ec7f7a9ad508f510ead60"
+    },
+    {
+      "path": "evidence/settlement.log",
+      "bytes": 388,
+      "sha256": "2b5cab457587776a44f28561dcfd3fad4858a634e5ee68f66c1af6f134e0977e"
+    },
+    {
+      "path": "evidence/snapshot-core.log",
+      "bytes": 5951,
+      "sha256": "6cd654fe00579e68871d30d6f9166118b9e919118d2b5bdd2861a46c4f5de663"
+    },
+    {
+      "path": "evidence/snapshot-records.log",
+      "bytes": 811,
+      "sha256": "30e79fec26f734a3ea4d2ee4ba9b48597f7d72f6873554d5bbf21d9194c5cd20"
+    },
+    {
+      "path": "evidence/solana-adapter.log",
+      "bytes": 436,
+      "sha256": "adf230c094c062963eaab2432949de1de22c317924c106d14ba6b452e672e946"
+    },
+    {
+      "path": "evidence/spec-bundled-python.log",
+      "bytes": 446,
+      "sha256": "4becae792bb88e01db7cf07ce0cad46e561dfa0a5590493e8fad4f8e25d43373"
+    },
+    {
+      "path": "evidence/spec.log",
+      "bytes": 132,
+      "sha256": "37f0b830447ae393d7c6e365453092bbb5cc4a168457248f425a7224ab380654"
+    },
+    {
+      "path": "evidence/typecheck.log",
+      "bytes": 114,
+      "sha256": "7047f6c33f295e8374b013806899a32e7f88fb647dabd8ce9b71f0753accbcdd"
+    },
+    {
+      "path": "examples/CONCORDANT.json",
+      "bytes": 65895,
+      "sha256": "d176da8a10f7db1f7fc8cc1fb635a04da36821510f8212568b85eef64cf4c876"
+    },
+    {
+      "path": "examples/INDEX.json",
+      "bytes": 2510,
+      "sha256": "d994e4505eb41995d1882d9a6f3e066089a002cdd884e212fb10423fe6734db9"
+    },
+    {
+      "path": "examples/SILENT.json",
+      "bytes": 24247,
+      "sha256": "1db62b3b5b0674554fb9fac327922dfbd1ff1de23176bcd5cf477efd907765a9"
+    },
+    {
+      "path": "examples/SPLIT.json",
+      "bytes": 65488,
+      "sha256": "f4b7df1e5cc52c643d9c52604afd3c491aaf7fd93d22100f933759bb53b9231c"
+    },
+    {
+      "path": "examples/THIN.json",
+      "bytes": 65296,
+      "sha256": "8ba4169b4b369df060e691fc0f408617453f600d7c1cec0ae6c5cb250d04aab5"
+    },
+    {
+      "path": "KNOWN_LIMITATIONS.md",
+      "bytes": 3109,
+      "sha256": "d6c4cff18052c6e26af9606dc41019c8207d8d81b8c0f48270a500f3835abb9c"
+    },
+    {
+      "path": "LICENSE_STATUS.md",
+      "bytes": 887,
+      "sha256": "2519ff0f5423a006d22c7e354ea76da8daf814e1eff404da890266b5d7fc1d23"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 1402,
+      "sha256": "da97760a61f51f3d42d4bcdafdf8f6708ab3a15cddaed4930fd2d81d47ef8b14"
+    },
+    {
+      "path": "LICENSES/Apache-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 758,
+      "sha256": "29a42ac85318f6b915138371a7fc7c631aa73b6f9a4b93166e2dd9967b8994cd"
+    },
+    {
+      "path": "package.json",
+      "bytes": 502,
+      "sha256": "36a2c146c3662c53981d2f735336d188e3050e8e5dc102fec0b2c159e1e0da8a"
+    },
+    {
+      "path": "packages/powit-core/README.md",
+      "bytes": 3159,
+      "sha256": "899c0d24c610383c6d425a11f188359a8450aafb90cab35f21613abc851d4cdc"
+    },
+    {
+      "path": "packages/powit-core/src/codec.ts",
+      "bytes": 6852,
+      "sha256": "db27c843bccc0b83d64c59cb04ea42d7bf70fb9f4dcb0b71e49233c668dcdb70"
+    },
+    {
+      "path": "packages/powit-core/src/derive.ts",
+      "bytes": 8442,
+      "sha256": "55fbc06b85e62ca94eb4566e76ed8bdb34a890d04fb01487d66f351c254f7fda"
+    },
+    {
+      "path": "packages/powit-core/src/index.ts",
+      "bytes": 525,
+      "sha256": "da3c3d9e08c33e0c904b0b347a6d75d150a481a02f1e451f71150d2cad0a31ad"
+    },
+    {
+      "path": "packages/powit-core/src/replay.ts",
+      "bytes": 4681,
+      "sha256": "2661a4203bdad201bd1400ec7849f1d1134bdb393ab702f522419ba460f58389"
+    },
+    {
+      "path": "packages/powit-core/src/session.ts",
+      "bytes": 22638,
+      "sha256": "a97dd29dfe86e28bd3d1973c71ae0acfc191c187eae90a89d42c2d67161c3243"
+    },
+    {
+      "path": "packages/powit-core/src/validation.ts",
+      "bytes": 17153,
+      "sha256": "b4345c1b67e92b426ad3a164bfb8d785c54a12b36276696c01b9990e7c789200"
+    },
+    {
+      "path": "packages/powit-core/test/core.test.ts",
+      "bytes": 18209,
+      "sha256": "d3ca323224a12628dd505f4252deaaa9a89005af94d74a461a51d882d59fdb09"
+    },
+    {
+      "path": "packages/powit-core/test/session-boundary.test.ts",
+      "bytes": 18546,
+      "sha256": "e44d50c952443bd3e406e354ec5f3572bd56c6e3a67d76128cc6652b364f97f1"
+    },
+    {
+      "path": "packages/powit-types/src/index.ts",
+      "bytes": 8269,
+      "sha256": "f284533402af1781385621c8bb90be1860787400acc9a362fd082dbbe801f42c"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "bytes": 13,
+      "sha256": "b379483d4293500af8e9d3e8d83b4b5a2ad1e844911cd7be7f7e274e4bb80666"
+    },
+    {
+      "path": "PROGRAMME.md",
+      "bytes": 9802,
+      "sha256": "f21f39e32c4b1baeeda8fb56a6cc9ee4ab14f845a1eda6f083d192d7fb56df3e"
+    },
+    {
+      "path": "protocol/overview/conceptual-hierarchy.md",
+      "bytes": 864,
+      "sha256": "81ed70bdcde30418e6de65a3ce0aa270b4af0ad19965f3d5fbbf09dad5c28a1b"
+    },
+    {
+      "path": "protocol/overview/document-governance.md",
+      "bytes": 3008,
+      "sha256": "6d07b0063a8797a5d2d820b4fc1d4237dcf9175db68323cc9d0adc18f2052091"
+    },
+    {
+      "path": "protocol/overview/README.md",
+      "bytes": 850,
+      "sha256": "60a1bbfbdc00e0971cbdbb01424c49a0faab395ebfed0e3a6164e4f9b3b5d9e0"
+    },
+    {
+      "path": "protocol/overview/terminology.md",
+      "bytes": 13910,
+      "sha256": "e5ae67e1a6c50965d5130f92df796ba711da1b64a744d2a1b6466bb3b2d9f4ff"
+    },
+    {
+      "path": "protocol/powit/epistemic-states.md",
+      "bytes": 839,
+      "sha256": "2ba37ed72430af03fc96a6fb3dedb2d2227739cb5918d6aabdef7f7e34df1e98"
+    },
+    {
+      "path": "protocol/powit/identity/selective-linkability.md",
+      "bytes": 865,
+      "sha256": "19f7a9a7063ed64d58e7050b3f1fac5319db950fd71ce9b01ef0bed863752e9c"
+    },
+    {
+      "path": "protocol/powit/reputation/reputation-vs-independence.md",
+      "bytes": 872,
+      "sha256": "96d2fe9637619c91733fbf8d06825147b0f0bac5f74d50ce322e2b68bd001ca4"
+    },
+    {
+      "path": "protocol/powit/settlement/solana.md",
+      "bytes": 852,
+      "sha256": "ed765ecdc53b1ae76ff7253bacc42ef82eee5a1bbb42d4d7665a587ad007b3a5"
+    },
+    {
+      "path": "protocol/powit/settlement/THOTH_V0_SETTLEMENT_PROFILE.md",
+      "bytes": 873,
+      "sha256": "77aa2c06337b3ab38b602d74e80290e2a3f62b16f56a4123679e997d09bf3a7a"
+    },
+    {
+      "path": "protocol/powit/v0/POWIT_V0_OPEN_QUESTIONS.md",
+      "bytes": 12596,
+      "sha256": "a40291c2575d29e4a89012ab3e8136e9132ee141870981df5a13d718ece390b0"
+    },
+    {
+      "path": "protocol/powit/v0/POWIT_V0_SPEC.md",
+      "bytes": 20908,
+      "sha256": "832273aa7988b3160905ac2dc0f394a079c80791a4522006a74bec0d5ba64390"
+    },
+    {
+      "path": "protocol/powit/v0/POWIT_V0_TEST_VECTORS.md",
+      "bytes": 248074,
+      "sha256": "458276315b4c30b88229f8a45fdb24b5f5f74acf0e4a0785c4f9eaf960c924d7"
+    },
+    {
+      "path": "protocol/powit/v0/POWIT_V0_TYPES.md",
+      "bytes": 35207,
+      "sha256": "904c28fb4d402d23ccc2212b1141ba98bf4f73e37e1baa710e207681f2a45f99"
+    },
+    {
+      "path": "protocol/reference/canonical-lifecycle.md",
+      "bytes": 1637,
+      "sha256": "410610aa35d60d879b4ea968796791d5465590d830e702f16f6da02f114cd8e8"
+    },
+    {
+      "path": "protocol/research/open-questions.md",
+      "bytes": 858,
+      "sha256": "69e937ee312efa20bc50e346e449e411114fe9f18a46e48c6d5a4ae1c77d6b05"
+    },
+    {
+      "path": "protocol/versions/README.md",
+      "bytes": 850,
+      "sha256": "f7482501950567c4b7e36f0759ab89dc3cf7250f98f41f5e20b57588a1efa8d0"
+    },
+    {
+      "path": "PUBLICATION.md",
+      "bytes": 19914,
+      "sha256": "0bdc8de9f27b1a75ce01d348513b4aa795cacde3b00810d622f85389b3b6a858"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6393,
+      "sha256": "bb39c662dbfcd26801e82e2bff10bd54f638ce5904fc5f75c0e66ce968937f96"
+    },
+    {
+      "path": "RELEASE_AUDIT.json",
+      "bytes": 1058,
+      "sha256": "ca33d7f423c75d4e3074da861d1dc57243fcfa3d7424c6e898966cd94e0ef8ec"
+    },
+    {
+      "path": "RELEASE_AUDIT.md",
+      "bytes": 3701,
+      "sha256": "36820209194994379cc78cad500423449fca0f7379c4a650eaf620e90cbc02e2"
+    },
+    {
+      "path": "RELEASE_VERIFICATION.md",
+      "bytes": 1903,
+      "sha256": "164049448b637ad06eef26ff2b9c2af33314ca15d94965764f624f3f18b00cfd"
+    },
+    {
+      "path": "scripts/verify-files.mjs",
+      "bytes": 531,
+      "sha256": "a511d459ca783bd23a780478f5dabf621f820702faf29167beb89e4c7e9ee491"
+    },
+    {
+      "path": "scripts/verify-records.mjs",
+      "bytes": 1918,
+      "sha256": "293339007ac0ca91d53cf58ec7de230ae1d136b67b58a384d0442e68ad481a9e"
+    },
+    {
+      "path": "SOURCE_LINKS.json",
+      "bytes": 3784,
+      "sha256": "26197a70057848688d3e88c30b2dc49a48f0f40327e1dbe153dcff73a006eb33"
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "bytes": 4646,
+      "sha256": "472b6849f3c64a6793d11108d002db7ccfd319db93764a72cbdd4c85d767f9b0"
+    },
+    {
+      "path": "VERIFIED_ENGINEERING.md",
+      "bytes": 9286,
+      "sha256": "16475c45efaae154d2318e0516dde4b43db374e1ccc02648c3d05011b568b6e0"
+    }
+  ]
+}

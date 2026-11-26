@@ -1,0 +1,15 @@
+Proof of Witness research release
+THOTH / Proof of Witness contributors
+
+This research snapshot preserves selected original protocol and implementation
+files and adds reproduction, publication and release documentation. Its source
+and release manifests identify the included bytes. Funding and release documents
+were revised on 26 November 2026; historical engineering results retain their dates.
+
+Code: Apache License 2.0.
+Specifications and research documentation: CC BY 4.0.
+See LICENSE.md for the file mapping and LICENSES/ for the complete terms.
+
+No third-party library or artwork is bundled. External standard references and
+project names do not imply endorsement. This NOTICE is attribution information
+and does not add conditions to either license.

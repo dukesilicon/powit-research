@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-26",
+  "sourceOriginalsVerified": 25,
+  "frozenDefinitionsChanged": 0,
+  "localLinksChecked": 176,
+  "brokenLocalLinks": [],
+  "unexpectedFiles": [],
+  "credentialPrivacyFindings": [],
+  "incompatibleLicenseNoticeFlags": [],
+  "scopeNotes": 9,
+  "funding": {
+    "primary": 25000,
+    "reduced": 15000,
+    "durationMonths": 3,
+    "existing": 0
+  },
+  "licenses": {
+    "code": "Apache-2.0",
+    "documentation": "CC-BY-4.0",
+    "founderRightsConfirmation": "Received 26 November 2026; no independent chain-of-title guarantee",
+    "officialTextHashes": {
+      "Apache-2.0": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "CC-BY-4.0": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    }
+  },
+  "limits": [
+    "Heuristic secret scan is not exhaustive",
+    "Historical external standards URL availability not comprehensively tested",
+    "Three parent specification-validator errors preserved; no new field/production/epistemic result"
+  ],
+  "verifiedAt": "2026-11-26T08:13:05.364Z"
+}

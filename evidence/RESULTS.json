@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-24",
+  "node": "24.18.0",
+  "pnpm": "11.25.0",
+  "logsRedactedForLocalPaths": [],
+  "commands": [
+    {
+      "completedAt": "2026-11-24T21:06:11.4425711+01:00",
+      "exitCode": 0,
+      "startedAt": "2026-11-24T21:06:09.1750635+01:00",
+      "command": "pnpm --config.manage-package-manager-versions=false --config.verify-deps-before-run=false check:boundaries",
+      "name": "boundaries"
+    },
+    {
+      "completedAt": "2026-11-24T21:06:13.5384606+01:00",
+      "exitCode": 1,
+      "startedAt": "2026-11-24T21:06:11.4997624+01:00",
+      "command": "pnpm --config.manage-package-manager-versions=false --config.verify-deps-before-run=false check:spec",
+      "name": "spec"
+    },
+    {
+      "completedAt": "2026-11-24T21:06:23.1484405+01:00",
+      "exitCode": 0,
+      "startedAt": "2026-11-24T21:06:13.5477320+01:00",
+      "command": "pnpm --config.manage-package-manager-versions=false --config.verify-deps-before-run=false --filter @thoth/powit-core test",
+      "name": "core"
+    },
+    {
+      "completedAt": "2026-11-24T21:07:05.9267407+01:00",
+      "exitCode": 0,
+      "startedAt": "2026-11-24T21:06:23.1511159+01:00",
+      "command": "pnpm --config.manage-package-manager-versions=false --config.verify-deps-before-run=false --filter @thoth/runtime test",
+      "name": "runtime"
+    },
+    {
+      "completedAt": "2026-11-24T21:07:09.0472888+01:00",
+      "exitCode": 0,
+      "startedAt": "2026-11-24T21:07:05.9296709+01:00",
+      "command": "pnpm --config.manage-package-manager-versions=false --config.verify-deps-before-run=false --filter @thoth/settlement test",
+      "name": "settlement"
+    },
+    {
+      "completedAt": "2026-11-24T21:07:13.4126913+01:00",
+      "exitCode": 0,
+      "startedAt": "2026-11-24T21:07:09.0542404+01:00",
+      "command": "pnpm --config.manage-package-manager-versions=false --config.verify-deps-before-run=false --filter @thoth/solana test",
+      "name": "solana-adapter"
+    },
+    {
+      "completedAt": "2026-11-24T21:07:30.8101923+01:00",
+      "exitCode": 0,
+      "startedAt": "2026-11-24T21:07:13.4155031+01:00",
+      "command": "pnpm --config.manage-package-manager-versions=false --config.verify-deps-before-run=false --filter @thoth/powit-types --filter @thoth/powit-core --filter @thoth/runtime --filter @thoth/settlement --filter @thoth/solana typecheck",
+      "name": "typecheck"
+    },
+    {
+      "name": "rebuilt-e2e",
+      "command": "pnpm --config.manage-package-manager-versions=false --config.verify-deps-before-run=false exec turbo run test --force --filter=@thoth/powit-core --filter=@thoth/runtime --filter=@thoth/settlement --filter=@thoth/solana",
+      "exitCode": 0,
+      "result": "8 successful tasks, 0 cached; 53+36+2+3 tests, no failures/skips",
+      "date": "2026-11-24"
+    },
+    {
+      "name": "spec-bundled-python",
+      "command": "<bundled-python> scripts/validate_spec.py",
+      "exitCode": 1,
+      "result": "3 preserved errors",
+      "date": "2026-11-24"
+    },
+    {
+      "name": "snapshot-core",
+      "command": "pnpm --config.manage-package-manager-versions=false --config.verify-deps-before-run=false --dir docs/funding/epistemics-technical-2026-11-24/research-snapshot test",
+      "exitCode": 0,
+      "result": "53 pass, 0 fail, 0 skip",
+      "date": "2026-11-24"
+    },
+    {
+      "name": "snapshot-records",
+      "command": "pnpm --config.manage-package-manager-versions=false --config.verify-deps-before-run=false --dir docs/funding/epistemics-technical-2026-11-24/research-snapshot verify",
+      "exitCode": 0,
+      "result": "4 session reconstructions/replays, 8 altered claims rejected",
+      "date": "2026-11-24"
+    }
+  ]
+}

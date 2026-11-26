@@ -1,0 +1,69 @@
+{
+  "provenance": "Fresh execution of existing loadDemonstrations against frozen synthetic fixtures; no human witnessing, no settlement submission",
+  "records": [
+    {
+      "state": "CONCORDANT",
+      "fixture": "E2E-1",
+      "title": "E2E-1 CONCORDANT → CONCORDANT",
+      "explanation": "Admitted Observations converge and satisfy the declared witness structure. This does not establish objective truth.",
+      "eventId": "e2e-1-concordant",
+      "attestationHash": "0088e00e861fe6cfb65b5f91881aa583f7b5204708241c73b9015f03ff0293ee",
+      "counts": {
+        "participations": 5,
+        "revealRecords": 5,
+        "admittedObservations": 5
+      },
+      "sufficiencyMet": true,
+      "reducer": "EXACT_MATCH",
+      "recordPath": "/demonstrations/CONCORDANT"
+    },
+    {
+      "state": "SPLIT",
+      "fixture": "E2E-2",
+      "title": "E2E-2 SPLIT → SPLIT",
+      "explanation": "Admitted Observations disagree while satisfying the declared witness structure. No majority conclusion replaces that disagreement.",
+      "eventId": "e2e-2-split",
+      "attestationHash": "c19c1ac53ea15f279e4fe5d2f8a537c8aafc61b0d56b65e92e31927cea3dc34d",
+      "counts": {
+        "participations": 5,
+        "revealRecords": 5,
+        "admittedObservations": 5
+      },
+      "sufficiencyMet": true,
+      "reducer": "EXACT_MATCH",
+      "recordPath": "/demonstrations/SPLIT"
+    },
+    {
+      "state": "THIN",
+      "fixture": "E2E-3",
+      "title": "E2E-3 THIN → THIN",
+      "explanation": "At least one Observation is admitted, but the declared witness structure is insufficient.",
+      "eventId": "e2e-3-thin",
+      "attestationHash": "758652a08d992811631734eb45208569cfc2f8ea24c2b40d84af40f5f5e1d718",
+      "counts": {
+        "participations": 5,
+        "revealRecords": 5,
+        "admittedObservations": 5
+      },
+      "sufficiencyMet": false,
+      "reducer": "EXACT_MATCH",
+      "recordPath": "/demonstrations/THIN"
+    },
+    {
+      "state": "SILENT",
+      "fixture": "E2E-4",
+      "title": "E2E-4 SILENT → SILENT",
+      "explanation": "No Observation is admitted. This does not establish that the Event did not occur.",
+      "eventId": "e2e-4-silent",
+      "attestationHash": "8a88efede531fac29d7957c5e0b23cb914156ebf22ab39b0422dc5f2ee4d7d76",
+      "counts": {
+        "participations": 5,
+        "revealRecords": 0,
+        "admittedObservations": 0
+      },
+      "sufficiencyMet": false,
+      "reducer": null,
+      "recordPath": "/demonstrations/SILENT"
+    }
+  ]
+}

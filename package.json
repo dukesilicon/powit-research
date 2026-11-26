@@ -1,0 +1,16 @@
+{
+  "name": "powit-research-snapshot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types packages/powit-core/test/core.test.ts",
+    "verify": "node --experimental-strip-types scripts/verify-records.mjs",
+    "verify:files": "node scripts/verify-files.mjs"
+  },
+  "license": "Apache-2.0",
+  "description": "PoWit initial-finalization research kernel and reproducible synthetic Records"
+}

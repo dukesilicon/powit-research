@@ -1,0 +1,2 @@
+$ node scripts/check-boundaries.mjs
+Boundary checks passed: two independent apps; app imports and aliases remain local.
